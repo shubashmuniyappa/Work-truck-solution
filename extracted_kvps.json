@@ -1,0 +1,372 @@
+[
+    {
+        "key": "INVOICE",
+        "value": "W 162412",
+        "confidence": 0.996
+    },
+    {
+        "key": "Date",
+        "value": "/ /",
+        "confidence": 0.791
+    },
+    {
+        "key": "PHONE #",
+        "value": "801-521-0360",
+        "confidence": 0.995
+    },
+    {
+        "key": "Date Open",
+        "value": "10/04/2024",
+        "confidence": 0.995
+    },
+    {
+        "key": "FAX #",
+        "value": "801-936-0112",
+        "confidence": 0.994
+    },
+    {
+        "key": "Page:",
+        "value": "1 of\n3",
+        "confidence": 0.998
+    },
+    {
+        "key": "Sold To :",
+        "value": "927-1182 801",
+        "confidence": 0.993
+    },
+    {
+        "key": "Ship To :",
+        "value": "",
+        "confidence": 0.974
+    },
+    {
+        "key": "ATTN:",
+        "value": "ACCTS PAYABLE",
+        "confidence": 0.937
+    },
+    {
+        "key": "Approved By",
+        "value": "Jon Miller",
+        "confidence": 0.996
+    },
+    {
+        "key": "Written By",
+        "value": "JWILHITE",
+        "confidence": 0.997
+    },
+    {
+        "key": "Terms",
+        "value": "CASH",
+        "confidence": 0.995
+    },
+    {
+        "key": "Time",
+        "value": "14:08:51",
+        "confidence": 0.996
+    },
+    {
+        "key": "Customer Po #",
+        "value": "SF119087",
+        "confidence": 0.996
+    },
+    {
+        "key": "PROMISED",
+        "value": "12/30/2024",
+        "confidence": 0.997
+    },
+    {
+        "key": "Cell Phone",
+        "value": "801-430-2172",
+        "confidence": 0.997
+    },
+    {
+        "key": "Ship Via",
+        "value": "None",
+        "confidence": 0.997
+    },
+    {
+        "key": "Unit #",
+        "value": "",
+        "confidence": 0.996
+    },
+    {
+        "key": "Plate #",
+        "value": "DPHMPR",
+        "confidence": 0.962
+    },
+    {
+        "key": "Year",
+        "value": "2025",
+        "confidence": 0.993
+    },
+    {
+        "key": "Make",
+        "value": "GMC",
+        "confidence": 0.996
+    },
+    {
+        "key": "Model",
+        "value": "2500 SIERRA",
+        "confidence": 0.996
+    },
+    {
+        "key": "Mileage/Hrs",
+        "value": "31/0.0",
+        "confidence": 0.997
+    },
+    {
+        "key": "VIN",
+        "value": "1GT1ULE76SF119087",
+        "confidence": 0.995
+    },
+    {
+        "key": "Engine",
+        "value": "",
+        "confidence": 0.998
+    },
+    {
+        "key": "Qty",
+        "value": "",
+        "confidence": 0.997
+    },
+    {
+        "key": "Description",
+        "value": "",
+        "confidence": 0.852
+    },
+    {
+        "key": "Price",
+        "value": "664.38",
+        "confidence": 0.997
+    },
+    {
+        "key": "Amount",
+        "value": "664.38",
+        "confidence": 0.982
+    },
+    {
+        "key": "Blade Assembly:",
+        "value": "WPL74485",
+        "confidence": 0.996
+    },
+    {
+        "key": "AQ&L Box 1:",
+        "value": "WPL74300-4",
+        "confidence": 0.982
+    },
+    {
+        "key": "Parts",
+        "value": "10129.74",
+        "confidence": 0.976
+    },
+    {
+        "key": "Labor",
+        "value": "1575.00",
+        "confidence": 0.964
+    },
+    {
+        "key": "Sublet.",
+        "value": "664.38",
+        "confidence": 0.988
+    },
+    {
+        "key": "Shop Supplies",
+        "value": "157.50",
+        "confidence": 0.98
+    },
+    {
+        "key": "DATE",
+        "value": "",
+        "confidence": 0.996
+    },
+    {
+        "key": "Paid by",
+        "value": "",
+        "confidence": 0.997
+    },
+    {
+        "key": "TOTAL\nContinued",
+        "value": "",
+        "confidence": 0.897
+    },
+    {
+        "key": "INVOICE",
+        "value": "W 162412",
+        "confidence": 0.997
+    },
+    {
+        "key": "Date",
+        "value": "",
+        "confidence": 0.995
+    },
+    {
+        "key": "PHONE #",
+        "value": "801-521-0360",
+        "confidence": 0.944
+    },
+    {
+        "key": "Date Open",
+        "value": "10/04/2024",
+        "confidence": 0.996
+    },
+    {
+        "key": "FAX #",
+        "value": "801-936-0112",
+        "confidence": 0.993
+    },
+    {
+        "key": "Page:",
+        "value": "2 of 3",
+        "confidence": 0.996
+    },
+    {
+        "key": "Sold To :",
+        "value": "927-1182 801",
+        "confidence": 0.992
+    },
+    {
+        "key": "Ship To :",
+        "value": "",
+        "confidence": 0.986
+    },
+    {
+        "key": "ATTN:",
+        "value": "ACCTS PAYABLE",
+        "confidence": 0.982
+    },
+    {
+        "key": "Approved By",
+        "value": "Jon Miller",
+        "confidence": 0.998
+    },
+    {
+        "key": "Written By",
+        "value": "JWILHITE",
+        "confidence": 0.997
+    },
+    {
+        "key": "Terms",
+        "value": "CASH",
+        "confidence": 0.996
+    },
+    {
+        "key": "Time",
+        "value": "14:08:51",
+        "confidence": 0.995
+    },
+    {
+        "key": "Customer Po #",
+        "value": "SF119087",
+        "confidence": 0.996
+    },
+    {
+        "key": "PROMISED",
+        "value": "12/30/2024",
+        "confidence": 0.997
+    },
+    {
+        "key": "Cell Phone",
+        "value": "801-430-2172",
+        "confidence": 0.996
+    },
+    {
+        "key": "Ship Via",
+        "value": "None",
+        "confidence": 0.997
+    },
+    {
+        "key": "Unit #",
+        "value": "",
+        "confidence": 0.992
+    },
+    {
+        "key": "Plate #",
+        "value": "DPHMPR",
+        "confidence": 0.989
+    },
+    {
+        "key": "Year",
+        "value": "2025",
+        "confidence": 0.986
+    },
+    {
+        "key": "Make",
+        "value": "GMC",
+        "confidence": 0.996
+    },
+    {
+        "key": "Model",
+        "value": "2500 SIERRA",
+        "confidence": 0.996
+    },
+    {
+        "key": "Mileage/Hrs",
+        "value": "31/0.0",
+        "confidence": 0.997
+    },
+    {
+        "key": "VIN",
+        "value": "1GT1ULE76SF119087",
+        "confidence": 0.996
+    },
+    {
+        "key": "Engine",
+        "value": "",
+        "confidence": 0.997
+    },
+    {
+        "key": "Qty",
+        "value": "2.000\n1.000",
+        "confidence": 0.887
+    },
+    {
+        "key": "Description",
+        "value": "Mount Assembly: WPL31700 Headlamp Harness: WEP87199 Light Kit: WEP72530 Handheld Control: WEP35500\nPort Isolation Module: WEP29070-1",
+        "confidence": 0.952
+    },
+    {
+        "key": "Price",
+        "value": "0.00\n8985.00",
+        "confidence": 0.871
+    },
+    {
+        "key": "Amount",
+        "value": "8985.00",
+        "confidence": 0.98
+    },
+    {
+        "key": "Parts.",
+        "value": "10129.74",
+        "confidence": 0.96
+    },
+    {
+        "key": "Labor ........",
+        "value": "1575.00",
+        "confidence": 0.936
+    },
+    {
+        "key": "Sublet.",
+        "value": "664.38",
+        "confidence": 0.997
+    },
+    {
+        "key": "Shop Supplies",
+        "value": "157.50",
+        "confidence": 0.997
+    },
+    {
+        "key": "DATE",
+        "value": "",
+        "confidence": 0.996
+    },
+    {
+        "key": "Paid by",
+        "value": "",
+        "confidence": 0.996
+    },
+    {
+        "key": "TOTAL",
+        "value": "Continued",
+        "confidence": 0.993
+    }
+]

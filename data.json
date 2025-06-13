@@ -1,0 +1,2013 @@
+[
+    {
+    "inventory_arrival_date": "2023-10-20",
+    "stock_number": "TRN275394",
+    "vin": "W1X9N33Y0RN275394",
+    "condition": "New",
+    "model_year": "2024",
+    "make": "Mercedes-Benz",
+    "model": "Sprinter 4500",
+    "body_type": "Box Van",
+    "body_line": "KCA",
+    "body_manufacturer": "Knapheide",
+    "body_model": "KCA 16'",
+    "distributor": "Knapheide",
+    "distributor_location": "Willis, TX 77318",
+    "invoice_date": "2025-03-14",
+    "components": [
+      {
+        "id": 3102010,
+        "name": "Body",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Aluminum"
+          },
+          {
+            "name": "Width",
+            "value": "96\""
+          },
+          {
+            "name": "Length",
+            "value": "16'"
+          },
+          {
+            "name": "Inside Height",
+            "value": "84\""
+          }
+        ]
+      },
+      {
+        "id": 3102011,
+        "name": "Bulkhead",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Solid"
+          }
+        ]
+      },
+      {
+        "id": 3102012,
+        "name": "Bumper",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Step"
+          }
+        ]
+      },
+      {
+        "id": 3102014,
+        "name": "Floor",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Pine"
+          }
+        ]
+      },
+      {
+        "id": 3102015,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Description",
+            "value": "Dome Lights"
+          },
+          {
+            "name": "Location",
+            "value": "Interior"
+          }
+        ]
+      },
+      {
+        "id": 3102016,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Description",
+            "value": "ICC Lights | Reflectors"
+          },
+          {
+            "name": "Location",
+            "value": "Exterior"
+          }
+        ]
+      },
+      {
+        "id": 3102017,
+        "name": "Mud Flaps",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Mud Flaps"
+          }
+        ]
+      },
+      {
+        "id": 3102018,
+        "name": "Side",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "24\" Plywood / 3-Pine Slats / 24\" Plywood Side Lining"
+          }
+        ]
+      },
+      {
+        "id": 3102019,
+        "name": "Understructure",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Undercoating"
+          }
+        ]
+      },
+      {
+        "id": 3102040,
+        "name": "Door",
+        "attributes": [
+          {
+            "name": "Manufacturer",
+            "value": "Transglobal"
+          },
+          {
+            "name": "Type",
+            "value": "Roll Up"
+          },
+          {
+            "name": "Location",
+            "value": "Rear"
+          }
+        ]
+      },
+      {
+        "id": 3102043,
+        "name": "Liftgate",
+        "attributes": [
+          {
+            "name": "Model",
+            "value": "C2-92-1650 EA37"
+          },
+          {
+            "name": "Description",
+            "value": "Maxon Gate Liftgate - Aluminum 85\" x 37\" + 6\""
+          },
+          {
+            "name": "Capacity",
+            "value": "1600"
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "date": "2025-03-20",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-419bb7b3-26ef-487f-8319-0fb753b0b179.pdf"
+      }
+    ]
+  },
+  {
+    "_comment": "Extracted data from Quadrant",
+    "invoice_number": "071F214857",
+    "bill_to": "Mercedes Benz Of The Woodlands (207679)\n16917 | 45 S\nCONROE TX 77385-3300\nUnited States",
+    "ship_to": "Mercedes Benz Of The Woodlands\n16917 | 45 S\nCONROE TX 77385-3300\nUnited States",
+    "vin": "W1X9N33YORN275394",
+    "distributor": "Knapheide Truck Equipment Center Houston",
+    "make": "Mercedes-Benz",
+    "model": "Sprinter 4500",
+    "year": "2024",
+    "invoice_date": "03/14/2025",
+    "list_of_items": [
+      {
+        "description": "Vehicle 16' DRY FREIGHT 96W X 84T; BASE BODY INCLUDES: SHEET AND POST INTERIOR 66\" WIDE STEP BUMPER L.E.D. DOME LIGHT (1) TRANSGLOBAL ROLL UP DOOR PINE FLOOR ON BODIES UP TO 16'; 16' DRY FREIGHT 96W X 84T BASE BODY INCLUDES: SHEET AND POST INTERIOR 66\" WIDE STEP BUMPER L.E.D. DOME LIGHT (1) TRANSGLOBAL ROLL UP DOOR PINE FLOOR ON BODIES UP TO 16'; WELD ON BRACKET 4.50 X 7.82 SPRINTER MOUNT 3.00 \u00d7 39.19; WELD ON BRACKET 4.38 X 6.25 RECESSED PER 10' SECTION FULL PLYWOOD 16'; 16'X96\" HARDWOOD FLOORING KIT MNTG KBT SPRNTR; CERTIFIED WEIGTH TICKET; NOSE CONE FOR SPRINTER; NOSE CONE BOX BODY MOUNT 90\" NOSE NC29-RM; MAXON C2-92-1650 EA37+6\"RAMP 1600LB LIFTGATE; C2-92-1650 EA37+6\"RAMP 1600 CAP STAKE BED ALUMINUM INSTALL; 16' DRY FREIGHT VAN BODY Installation Labor - Weight Slip; INSTALL - NOSE CONE; Installation Labor - LIFTGATE",
+        "amount": "$ 22,863.90"
+      },
+      {
+        "description": "Installation Labor - Weight Slip",
+        "amount": "$ 2,145.60"
+      }
+    ],
+    "total_amount": 25009.5,
+    "file_path": "img/invoices/bodyinvoices/-/invoice-419bb7b3-26ef-487f-8319-0fb753b0b179.pdf"
+  },
+
+  {
+    "inventory_arrival_date": "2023-07-28",
+    "stock_number": "430040",
+    "vin": "3C7WRNEL9RG111741",
+    "condition": "New",
+    "model_year": "2024",
+    "make": "Ram",
+    "model": "Ram 5500",
+    "body_type": "Dump Truck",
+    "body_line": "Z-DumpPRO™ Premier",
+    "body_manufacturer": "Monroe",
+    "body_model": "DrumpPro",
+    "distributor": "Monroe",
+    "distributor_location": "Chicago, IL 60677",
+    "invoice_date": "2023-10-16",
+    "components": [
+      {
+        "id": 2518468,
+        "name": "Body",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Stainless Steel"
+          },
+          {
+            "name": "Length",
+            "value": "9'"
+          },
+          {
+            "name": "Inside Width",
+            "value": "87\""
+          },
+          {
+            "name": "Weight",
+            "value": "1579"
+          },
+          {
+            "name": "Capacity",
+            "value": "3-4 Yard"
+          }
+        ]
+      },
+      {
+        "id": 2518469,
+        "name": "Bulkhead",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Heavy Duty Front Bulkhead, Tapered Cab Protector & Tapered Laser Cut Window"
+          },
+          {
+            "name": "Material",
+            "value": "Stainless Steel"
+          }
+        ]
+      },
+      {
+        "id": 2518470,
+        "name": "Cab Shield",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "12\" Tapered \n"
+          },
+          {
+            "name": "Material",
+            "value": "Steel"
+          }
+        ]
+      },
+      {
+        "id": 2518471,
+        "name": "Cargo Control",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Tie Loops"
+          },
+          {
+            "name": "Quantity",
+            "value": "2"
+          },
+          {
+            "name": "Location",
+            "value": "Under Body"
+          }
+        ]
+      },
+      {
+        "id": 2518472,
+        "name": "Floor",
+        "attributes": [
+          {
+            "name": "Gauge",
+            "value": "7"
+          }
+        ]
+      },
+      {
+        "id": 2518473,
+        "name": "Hitch",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Receiver"
+          },
+          {
+            "name": "Description",
+            "value": "1/2\" Plate"
+          },
+          {
+            "name": "Size",
+            "value": "2.5\""
+          },
+          {
+            "name": "Capacity",
+            "value": "18000"
+          }
+        ]
+      },
+      {
+        "id": 2518474,
+        "name": "Hoist",
+        "attributes": [
+          {
+            "name": "Manufacturer",
+            "value": "Champion"
+          },
+          {
+            "name": "Type",
+            "value": "Electric"
+          },
+          {
+            "name": "Style",
+            "value": "Double Acting"
+          }
+        ]
+      },
+      {
+        "id": 2518475,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Description",
+            "value": "FMVSS108 Lights & Reflectors"
+          },
+          {
+            "name": "Location",
+            "value": "Exterior"
+          }
+        ]
+      },
+      {
+        "id": 2518476,
+        "name": "Mud Flaps",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Mud Flaps"
+          }
+        ]
+      },
+      {
+        "id": 2518477,
+        "name": "Side",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Folding"
+          },
+          {
+            "name": "Height",
+            "value": "16\""
+          },
+          {
+            "name": "Gauge",
+            "value": "12"
+          }
+        ]
+      },
+      {
+        "id": 2518478,
+        "name": "Tailgate",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Single-Lever Release, Quick Drop Tailgate"
+          },
+          {
+            "name": "Height",
+            "value": "22\""
+          }
+        ]
+      },
+      {
+        "id": 2518480,
+        "name": "Understructure",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Undercoating"
+          }
+        ]
+      },
+      {
+        "id": 2518501,
+        "name": "Camera",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Factory Backup Camera"
+          }
+        ]
+      },
+      {
+        "id": 2518502,
+        "name": "Toolbox",
+        "attributes": [
+          {
+            "name": "Manufacturer",
+            "value": "Buyers"
+          },
+          {
+            "name": "Type",
+            "value": "Under Body"
+          },
+          {
+            "name": "Quantity",
+            "value": "1"
+          },
+          {
+            "name": "Material",
+            "value": "Aluminum"
+          },
+          {
+            "name": "Location",
+            "value": "Curb Side"
+          },
+          {
+            "name": "Height",
+            "value": "18\""
+          },
+          {
+            "name": "Length",
+            "value": "30\""
+          },
+          {
+            "name": "Depth",
+            "value": "18\""
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "date": "2024-04-26",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-8ad73279-2a32-4f43-9167-bbe134ae9d50.pdf"
+      }
+    ]
+  },
+  {
+    "_comment": "Extracted data from Quadrant",
+    "invoice_number": "929537",
+    "bill_to": "BUD'S CHRYSLER DODGE JEEP\n945 S MAIN ST\nPO BOX 256\nCELINA OH 45822",
+    "ship_to": "BUD'S CHRYSLER DODGE JEEP\n945 S MAIN ST\nPO BOX 256\nCELINA OH 45822",
+    "vin": "3C7WRNEL9RG111741",
+    "distributor": "MONROE TRUCK EQUIPMENT, INC.",
+    "make": "RAM",
+    "model": "RAM 5500",
+    "year": "2023",
+    "invoice_date": "10/16/2023",
+    "list_of_items": [
+      {
+        "description": "9', MTE D-SERIES, STAINLESS STEEL, 3-4 YD CAPACITY, FOLDING SIDE, DUMP BODY W/ AR FLOORING \u00b7 3/16\" AR-400 (ABRASIVE RESISTANCE), 145,000 YIELD STRENGTH FLOOR - 45,000 PSI YIELD STRENGTH STAINLESS STEEL SIDES & ENDS - 10 GA. ENDS, 12 GA. SIDES, 16\" H SIDES, 22\" H TAILGATE - HEAVY DUTY FRONT BULKHEAD WITH TAPERED LASER CUT WINDOW & INTEGRAL 12\" TAPERED CAB SHIELD (GM MEDIUM-DUTY BODY TO HAVE FULL-WIDTH SQUARE CAB SHIELD IN LIEU OF TAPERED) - INTERNAL DIRT SHEDDING TOP RAILS & TAILGATE - CROSS-MEMBERLESS UNDERSTRUCTURE W/ STAINLESS STEEL LONG SILLS \u00bb - SINGLE-LEVER RELEASE, QUICK DROP TAILGATE - (2) UNDERBODY TIE LOOPS - L.E.D. FMVSS108 LIGHTS & REFLECTORS - RUBBER REAR FLAPS - LONG LIFE & CORROSION RESISTANT - UNDERCOATED DOUBLE-ACTING ELECTRIC SUB-FRAME HOIST (CHAMPION) 2-1/2\" RECEIVER IN 1/2\" PLATE - 1800 TONGUE CAPACITY / 18,000 TOWING CAPACITY TRAILER RECEPTACLE INSTALL FACTORY BACKUP CAMERA - GREATER THAN 10,000 GVW (MUST COME FROM FACTORY LOOSE - DOES NOT COVER CAMERA THAT WAS REMOVED BY CUSTOMER & SENT LOOSE) (1) BUYERS 18X18X30 ALUMINUM UNDERBODY TOOL BOX W/ 3 POINT LATCH - CURBSIDE",
+        "amount": "$16,999.00"
+      }
+    ],
+    "total_amount": 16999.0,
+    "file_path": "img/invoices/bodyinvoices/-/invoice-8ad73279-2a32-4f43-9167-bbe134ae9d50.pdf"
+  },
+  {
+    "inventory_arrival_date": "2023-08-04",
+    "stock_number": "RM28178",
+    "vin": "3C7WRNCL8RG135337",
+    "condition": "New",
+    "model_year": "2024",
+    "make": "Ram",
+    "model": "Ram 5500",
+    "body_type": "Landscape Dump",
+    "body_line": "Landscape Dump",
+    "body_manufacturer": "Scelzi",
+    "body_model": "Landscaper 8' x 14' Flatbed Dump",
+    "distributor": "Scelzi",
+    "distributor_location": "Fresno, CA 93706",
+    "invoice_date": "2024-09-17",
+    "components": [
+      {
+        "id": 2758182,
+        "name": "Body",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Width",
+            "value": "96\""
+          },
+          {
+            "name": "Length",
+            "value": "14'"
+          }
+        ]
+      },
+      {
+        "id": 2758183,
+        "name": "Cargo Control",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Rope Hooks"
+          },
+          {
+            "name": "Location",
+            "value": "Crossmembers"
+          }
+        ]
+      },
+      {
+        "id": 2758184,
+        "name": "Door",
+        "attributes": [
+          {
+            "name": "Location",
+            "value": "Front"
+          },
+          {
+            "name": "Height",
+            "value": "42\""
+          },
+          {
+            "name": "Width",
+            "value": "48\""
+          }
+        ]
+      },
+      {
+        "id": 2758185,
+        "name": "Door",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Barn"
+          },
+          {
+            "name": "Location",
+            "value": "Rear"
+          },
+          {
+            "name": "Height",
+            "value": "42\""
+          }
+        ]
+      },
+      {
+        "id": 2758186,
+        "name": "Floor",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Smooth"
+          },
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Gauge",
+            "value": "10"
+          }
+        ]
+      },
+      {
+        "id": 2758187,
+        "name": "Headache Rack",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Gauge",
+            "value": "10"
+          }
+        ]
+      },
+      {
+        "id": 2758188,
+        "name": "Hoist",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Electric/Hydraulic"
+          },
+          {
+            "name": "Style",
+            "value": "Double Acting"
+          }
+        ]
+      },
+      {
+        "id": 2758189,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Description",
+            "value": "Seal Beam Clearance Lights & OEM Taillights"
+          },
+          {
+            "name": "Location",
+            "value": "Exterior"
+          }
+        ]
+      },
+      {
+        "id": 2758190,
+        "name": "Side",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Solid Racks"
+          },
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Height",
+            "value": "42\""
+          }
+        ]
+      },
+      {
+        "id": 2758195,
+        "name": "Tarp",
+        "attributes": [
+          {
+            "name": "Manufacturer",
+            "value": "Scelzi"
+          },
+          {
+            "name": "Type",
+            "value": "Manual"
+          }
+        ]
+      },
+      {
+        "id": 2758196,
+        "name": "Liner",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Sprayline - Complete Cargo Area"
+          },
+          {
+            "name": "Material",
+            "value": "Polyurea"
+          }
+        ]
+      },
+      {
+        "id": 2758197,
+        "name": "Hitch",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Receiver"
+          },
+          {
+            "name": "Class",
+            "value": "V"
+          }
+        ]
+      },
+      {
+        "id": 2758198,
+        "name": "Trailer Plug",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "7-Way Flat RV"
+          }
+        ]
+      },
+      {
+        "id": 2758199,
+        "name": "Alarm",
+        "attributes": [
+          {
+            "name": "Manufacturer",
+            "value": "ECCO"
+          },
+          {
+            "name": "Type",
+            "value": "Back Up"
+          },
+          {
+            "name": "Description",
+            "value": "#510"
+          }
+        ]
+      },
+      {
+        "id": 2758200,
+        "name": "Camera",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Factory Backup Camera"
+          }
+        ]
+      },
+      {
+        "id": 2758201,
+        "name": "Toolbox",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Under Body"
+          },
+          {
+            "name": "Height",
+            "value": "18\""
+          },
+          {
+            "name": "Length",
+            "value": "60\""
+          },
+          {
+            "name": "Depth",
+            "value": "18\""
+          },
+          {
+            "name": "Color",
+            "value": "White"
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "date": "2024-09-18",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-4ce8b538-e524-4040-86b1-e6373c444d61.pdf"
+      },
+      {
+        "date": "2024-01-30",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-8e385649-7ddf-4534-bd7d-0e320f3cabb6.pdf"
+      }
+    ]
+  },
+  {
+    "_comment": "Extracted data from Quadrant",
+    "invoice_number": "287989",
+    "bill_to": "RUSSELL WESTBROOK CHRYSLER\n6110 VAN NUYS BLVD\nAttn: MACHADO, JOHN\nVAN NUYS, CA 91401",
+    "ship_to": "RUSSELL WESTBROOK CHRYSLER\n6110 VAN NUYS BLVD\nVAN NUYS, CA 91401",
+    "vin": "3C7WRNCL8RG135337",
+    "distributor": "Scelzi Enterprises, Inc.",
+    "make": "",
+    "model": "GARDNER 8X14 B",
+    "year": "2024",
+    "invoice_date": "9/17/2024",
+    "list_of_items": [
+      {
+        "description": "8 X 14 FLAT BED DUMP WITH: PACKAGE B - SMOOTH STEEL FLOOR - 10 GAUGE - CROSSMEMBERS ON 16\" CENTERS - ROPE HOOKS ON EACH CROSSMEMBER - LED SEAL BEAM CLEARANCE LIGHTS AND OEM TAILLIGHTS - HEADBOARD 10GA -STANDARD; 42\" SOLID STEEL SIDE RACKS WITH FRONT VERTICAL DOOR 48\" WIDE X 42\" HIGH (1) DRIVERSIDE (1) PASSENGER SIDE",
+        "amount": "24,326.00"
+      },
+      {
+        "description": "DOUBLE ACTING 12 VOLT ELECTRIC HYDRAULIC DUMP ASSEMBLY; REAR BARN DOORS; SCELZI DURA PULL TARP INSTALLED; POLYUREA COMPLETE CARGO AREA - HEADBOARD, FLOOR, INSIDE OF SIDE RACKS AND INSIDE OF BARN DOORS; CLASS 5 RECEIVER HITCH - DUMP BODY; TRAILER PLUG 7 WAY FLAT RV #12707; ECCO #510 BACK UP ALARM; RELOCATE FACTORY BACK UP CAMERA; 60\" X 18\" X 18\" UNDERBODY TOOLBOXES FRAME MOUNTED @ FRONT, BOTH SIDES - PAINTED WHITE",
+        "amount": ""
+      },
+      {
+        "description": "WEIGHT CERTIFICATE OF COMPLETED UNIT 11,980 LBS",
+        "amount": "45.00"
+      },
+      {
+        "description": "HAZARDOUS WASTE DISPOSAL FEE",
+        "amount": "50.00"
+      },
+      {
+        "description": "TRANSPORTATION ONE WAY TO VAN NUYS, CA.",
+        "amount": ""
+      }
+    ],
+    "total_amount": 24421.0,
+    "file_path": "img/invoices/bodyinvoices/-/invoice-4ce8b538-e524-4040-86b1-e6373c444d61.pdf"
+  },
+
+  {
+    "inventory_arrival_date": "2025-03-20",
+    "stock_number": "F23346B",
+    "vin": "1FDFF6KTXRDA33480",
+    "condition": "New",
+    "model_year": "2024",
+    "make": "Ford",
+    "model": "F-600",
+    "body_type": "Box Truck",
+    "body_line": "Box Truck",
+    "body_manufacturer": "Marathon",
+    "body_model": "16' IL x 96\" W x  96\"IH Composite Van Body",
+    "distributor": "Marathon",
+    "distributor_location": "Santa Clarita, CA 91350",
+    "invoice_date": "2025-03-12",
+    "components": [
+      {
+        "id": 3169660,
+        "name": "Body",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Composite"
+          },
+          {
+            "name": "Width",
+            "value": "96\""
+          },
+          {
+            "name": "Inside Height",
+            "value": "96\""
+          },
+          {
+            "name": "Inside Length",
+            "value": "192\""
+          }
+        ]
+      },
+      {
+        "id": 3169661,
+        "name": "Bulkhead",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Composite Wall and Bulkhead Panels"
+          }
+        ]
+      },
+      {
+        "id": 3169662,
+        "name": "Roof",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Roof Bows on 24\" Centers"
+          },
+          {
+            "name": "Material",
+            "value": "Aluminum"
+          }
+        ]
+      },
+      {
+        "id": 3169663,
+        "name": "Floor",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Hardwood"
+          },
+          {
+            "name": "Thickness",
+            "value": "1-1/8\""
+          }
+        ]
+      },
+      {
+        "id": 3169664,
+        "name": "Cargo Control",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "E-Track"
+          }
+        ]
+      },
+      {
+        "id": 3169665,
+        "name": "Bumper",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Step Bumper"
+          },
+          {
+            "name": "Location",
+            "value": "Rear"
+          }
+        ]
+      },
+      {
+        "id": 3169666,
+        "name": "Liftgate",
+        "attributes": [
+          {
+            "name": "Manufacturer",
+            "value": "Maxon"
+          },
+          {
+            "name": "Model",
+            "value": "TE-25"
+          },
+          {
+            "name": "Type",
+            "value": "Tuck Away"
+          },
+          {
+            "name": "Description",
+            "value": "40\" x 80\" Platform"
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "date": "2025-04-22",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-0c5eedf1-02b7-43f7-8082-eb1a058e3a44.pdf"
+      }
+    ]
+  },
+    {
+    "_comment": "Extracted data from Quadrant",
+    "invoice_number": "PSI-052604",
+    "bill_to": "Ron Dupratt Ford\n1320 N. First St.\nDixon, CA 95620\nTel: 707-678-5555\nFax: 707-693-6151",
+    "ship_to": "Ron Dupratt Ford\n1320 N. First St.\nDixon, CA 95620\nTel: 707-678-5555\nFax: 707-693-6151",
+    "vin": "1FDFF6KTXRDA33480",
+    "distributor": "Marathon Industries Inc.",
+    "make": "FORD",
+    "model": "F600",
+    "year": "2024",
+    "invoice_date": "03/12/25",
+    "list_of_items": [
+      {
+        "description": "Drop Ship Chassis Reno/Sparks; Drop Ship Chassis to: Marathon Truck Body, Inc.; F-600 chassis at Marathon",
+        "amount": ""
+      },
+      {
+        "description": "16'ILx96\"OWx96\"IH AlumVanBody; Stainless Steel Rear Portal; Pre-painted Polar White .040 Aluminum Wall Panels; Wall Posts on 16\" Centers; Walls Lined w/ 1\"x6\" Wood Slats (7) (2) at base w/ (5) Above; Bulkhead lined with Plywood; One piece Aluminum Roof; Roof Bows bonded every 24\" on Center; Radius Front Roof Corners w/ recessed LED Lights",
+        "amount": ""
+      },
+      {
+        "description": "Stainless Steel Radius Panel; 1 1/8\" Hardwood Floor; 4\" I-Beam Crossmembers 12\" on centrs; Interior Domelight & all FMVSS Lights & Reflectors; Overhead Roll-Up Rear Door; SER# 42877662-1; Mudflaps, Grab Handles, and Undercoating; LED tail lights and marker lights",
+        "amount": ""
+      },
+      {
+        "description": "Forklift/Pallet Jack Package; In addition to Std. HD Features; 1/8\" Steel Wheel Plates Welded Over Tires; 7 GA, Rear Portal Threshold (Extra HD); 3\"x4\"x1/4\" Angle ( Bulkhead Support )",
+        "amount": ""
+      },
+      {
+        "description": "E Track - non inlaid; (2) Rows on the sides @ 30\" & 60\" O/C",
+        "amount": ""
+      },
+      {
+        "description": "Maxon TE-25 2500lb Tuckaway: SER# 25020800988; 48 x 80 steel platform, cab on/off switch; step bumper and rubber dock pads; LED tail lights on the rear body post",
+        "amount": ""
+      },
+      {
+        "description": "One Way to Sacramento Region",
+        "amount": ""
+      },
+      {
+        "description": "Weight Certificate & Misc Fuel",
+        "amount": ""
+      }
+    ],
+    "total_amount": 21473.0,
+    "file_path": "img/invoices/bodyinvoices/-/invoice-0c5eedf1-02b7-43f7-8082-eb1a058e3a44.pdf"
+  },
+  {
+    "inventory_arrival_date": "2024-04-12",
+    "stock_number": "24WC161",
+    "vin": "1HA6GUC73RN003296",
+    "condition": "New",
+    "model_year": "2024",
+    "make": "Chevrolet",
+    "model": "Express 4500",
+    "body_type": "Box Van",
+    "body_line": "Cargoport",
+    "body_manufacturer": "Rockport",
+    "body_model": "RPAF1576",
+    "distributor": "Forest River",
+    "distributor_location": "Elkhart, IN 46515",
+    "invoice_date": "2024-07-26",
+    "components": [
+      {
+        "id": 2731474,
+        "name": "Body",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "FRP"
+          },
+          {
+            "name": "Height",
+            "value": "90\""
+          },
+          {
+            "name": "Width",
+            "value": "96\""
+          },
+          {
+            "name": "Length",
+            "value": "15'"
+          }
+        ]
+      },
+      {
+        "id": 2731475,
+        "name": "Bulkhead",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Sliding Bulkhead Door W/ 6\" Set Back Wall For Full Seat Travel"
+          }
+        ]
+      },
+      {
+        "id": 2731476,
+        "name": "Bumper",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Pooched Step"
+          },
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Location",
+            "value": "Rear"
+          },
+          {
+            "name": "Depth",
+            "value": "12\""
+          }
+        ]
+      },
+      {
+        "id": 2731477,
+        "name": "Cargo Control",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Tie-Down Rings"
+          },
+          {
+            "name": "Quantity",
+            "value": "10"
+          }
+        ]
+      },
+      {
+        "id": 2731478,
+        "name": "Door",
+        "attributes": [
+          {
+            "name": "Manufacturer",
+            "value": "Transglobal"
+          },
+          {
+            "name": "Type",
+            "value": "Roll Up"
+          },
+          {
+            "name": "Description",
+            "value": "with Inside Release"
+          },
+          {
+            "name": "Material",
+            "value": "Composite"
+          },
+          {
+            "name": "Location",
+            "value": "Rear"
+          }
+        ]
+      },
+      {
+        "id": 2731479,
+        "name": "Floor",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Laminated Floor"
+          },
+          {
+            "name": "Material",
+            "value": "Hardwood"
+          },
+          {
+            "name": "Thickness",
+            "value": "1-1/8\""
+          }
+        ]
+      },
+      {
+        "id": 2731480,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Description",
+            "value": "Rear Lights in Side Posts, Clearance Lights"
+          },
+          {
+            "name": "Location",
+            "value": "Exterior"
+          }
+        ]
+      },
+      {
+        "id": 2731481,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Description",
+            "value": "with 3-Way Lighted Cab Switch"
+          },
+          {
+            "name": "Style",
+            "value": "Cargo"
+          },
+          {
+            "name": "Quantity",
+            "value": "1"
+          },
+          {
+            "name": "Location",
+            "value": "Interior"
+          }
+        ]
+      },
+      {
+        "id": 2731482,
+        "name": "Side",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Gelcoat Sidewalls"
+          },
+          {
+            "name": "Material",
+            "value": "FRP"
+          },
+          {
+            "name": "Thickness",
+            "value": "3/8\""
+          }
+        ]
+      },
+      {
+        "id": 2731485,
+        "name": "Mud Flaps",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Mud Flaps"
+          }
+        ]
+      },
+      {
+        "id": 2731487,
+        "name": "Roof",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": ".032 Aluminum Roof Skin | Anti-Snag Bows on 24\" Center"
+          },
+          {
+            "name": "Material",
+            "value": "Aluminum"
+          }
+        ]
+      },
+      {
+        "id": 2731489,
+        "name": "Camera",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Rear View Backup Camera 7\" LCD Monitor and Audio"
+          },
+          {
+            "name": "Size",
+            "value": "7\""
+          }
+        ]
+      },
+      {
+        "id": 2731490,
+        "name": "Alarm",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Back Up"
+          }
+        ]
+      },
+      {
+        "id": 2731491,
+        "name": "Walkramp",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "12' x 30\" Underbody Ramp"
+          }
+        ]
+      },
+      {
+        "id": 2731493,
+        "name": "Cargo Control",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "(2)  Rows of E-Track on Both Sides - 24\" and 48\" From Floor"
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "date": "2024-09-04",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-c8ae41c4-0d29-48da-82ec-e7b84e9121b0.pdf"
+      }
+    ]
+  },
+  {
+    "_comment": "Extracted data from Quadrant",
+    "invoice_number": "13710068",
+    "bill_to": "0029371 CHARLIE OBAUGH AUTO GROUP OF PO BOX 2648 STAUNTON, VA 24401 USA",
+    "ship_to": "213 ROLLING THUNDER LANE STAUNTON, VA 24401 USA",
+    "vin": "1HA6GUC73RN003296",
+    "distributor": "FOREST RIVER, INC.",
+    "make": "CHEVROLET",
+    "model": "CG33803 C4500",
+    "year": "2024",
+    "invoice_date": "7/26/2024",
+    "list_of_items": [
+      {
+        "description": "ROCKPORT: 15'L x 96\"W x 90\"H FRP FEATURES: 3/8\" FRP GELCOAT SIDEWALLS, BULKHEAD SLIDING DOOR ON CAB SIDE W/ 6\" SET BACK WALL FOR FULL SEAT TRAVEL, TRUE NOMINAL BODY LENGTH BEHIND SET BACK WALL, TUBE SHAPE LONG SILLS, 3\" CROSSMEMBERS 16\" OC, ALMINUM FRONT RADIUS, ALUMINUM VERTICAL CORNERS, 1 1/8\" LAMINATED HARDWOOD FLOOR, REAR MUD FLAPS, COATED REAR STRUCTURE WITH FLUSH REAR SILL, LED REAR LIGHTS IN SIDE POSTS (1) LED CARGO LIGHT W/ 3-WAY LIGHTED CAB SWITCH, 12\" STEEL POOCHED REAR STEP BUMPER, .032 ALUMINUM ROOF, ROOF BOWS 24\" OC, COMPOSITE REAR ROLL UP DOOR W/ INSIDE RELEASE, LED CLEARANCE LIGHTS, (10) TIE RINGS, (2) GRAB HANDLES, UNDERCOATING",
+        "amount": "$11,075.00"
+      },
+      {
+        "description": "2024 C24T - 2024 CHEVROLET CG33803 C4500 CUTAWAY CHASSIS, 159\" WHEELBASE, DUAL REAR WHEELS, 6.6L GAS ENGINE, 14,200# GVWR, 57 GAL REAR FUEL TANK, INT. & EXT. UPGRADE",
+        "amount": "$0.00"
+      },
+      {
+        "description": "ONSTAR ANTENNA RELOCATED TO CARGO ROOF - REQUIRES GM OPTION G7K ANTENNA EQUIPMENT, CABLE & GROUND PLATE",
+        "amount": "$95.00"
+      },
+      {
+        "description": "REAR VIEW BACK-UP CAMERA, HIGH DEFINITION, 7\" LCD MONITOR & AUDIO - ROCKPORT SUPPLIED IN LIEU OF FACTORY SUPPLIED CAMERA IF EQUIPPED. RETURN FACTORY COMPONENTS IN CAB",
+        "amount": "$495.00"
+      },
+      {
+        "description": "REAR BACK-UP ALARM",
+        "amount": "$75.00"
+      },
+      {
+        "description": "FLOOR CROSS MEMBERS ON 12\" CENTERS IN LIEU OF 16\", 3\" C-CHANNEL. (UP TO 18'L)",
+        "amount": "$125.00"
+      },
+      {
+        "description": "GALVANIZED STEEL SCUFF 12\" HIGH ON SIDEWALLS - (UP TO 18')",
+        "amount": "$455.00"
+      },
+      {
+        "description": "GALVANIZED STEEL SCUFF 12\" HIGH ON FRONT WALL W/RETURN LIP (FASTENED TO FLOOR) P/N S2102003",
+        "amount": "$250.00"
+      },
+      {
+        "description": "12' X 30\" UNDERFLOOR RAMP (30\" USEABLE RAMP WIDTH) CUTAWAY CHASSIS ONLY",
+        "amount": "$1,920.00"
+      },
+      {
+        "description": "SURFACE E-TRACK-EACH SIDE (IPO OF STANDARD D-RINGS) -UP TO 18'-LOCATED @ 36\" TO CENTERLINE PRODUCTION NOTES: 24\" & 48\" FLOOR TO CENTERLINE",
+        "amount": "$430.00"
+      },
+      {
+        "description": "ROLL-UP REAR DOOR - TRANSGLOBAL EXTREME DUTY COMPOSITE, INSIDE RELEASE",
+        "amount": "$0.00"
+      },
+      {
+        "description": "FRONT END ALIGNMENT OPTION WAS DECLINED BY THE DEALER",
+        "amount": "$0.00"
+      },
+      {
+        "description": "SURCHARGE",
+        "amount": "$0.00"
+      },
+      {
+        "description": "FREIGHT",
+        "amount": "$995.00"
+      }
+    ],
+    "total_amount": 15915.0,
+    "file_path": "img/invoices/bodyinvoices/-/invoice-c8ae41c4-0d29-48da-82ec-e7b84e9121b0.pdf"
+  },
+  {
+    "inventory_arrival_date": "2024-03-18",
+    "stock_number": "CT2F1432",
+    "vin": "1FD0X5HT1REC92857",
+    "condition": "New",
+    "model_year": "2024",
+    "make": "Ford",
+    "model": "F-550",
+    "body_type": "Service Truck",
+    "body_line": "Panel Service Body",
+    "body_manufacturer": "Reading",
+    "body_model": "TPB72-132",
+    "distributor": "Reading",
+    "distributor_location": "Reading, PA 19611",
+    "invoice_date": "2024-08-30",
+    "components": [
+      {
+        "id": 2725327,
+        "name": "Body",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Width",
+            "value": "91-1/2\""
+          },
+          {
+            "name": "Length",
+            "value": "11'"
+          },
+          {
+            "name": "Inside Height",
+            "value": "72\""
+          },
+          {
+            "name": "Inside Width",
+            "value": "48.5\""
+          },
+          {
+            "name": "Color",
+            "value": "White"
+          }
+        ]
+      },
+      {
+        "id": 2725328,
+        "name": "Compartment",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Utility"
+          },
+          {
+            "name": "Description",
+            "value": "\"A\" Compartment Layout - Both Sides | Adjustable Shelves/Trays with Dividers"
+          }
+        ]
+      },
+      {
+        "id": 2725329,
+        "name": "Door",
+        "attributes": [
+          {
+            "name": "Location",
+            "value": "Rear"
+          },
+          {
+            "name": "Height",
+            "value": "48\""
+          },
+          {
+            "name": "Width",
+            "value": "68.5\""
+          }
+        ]
+      },
+      {
+        "id": 2725330,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Description",
+            "value": "with Switch at Rear"
+          },
+          {
+            "name": "Style",
+            "value": "Cargo"
+          },
+          {
+            "name": "Quantity",
+            "value": "2"
+          },
+          {
+            "name": "Location",
+            "value": "Interior"
+          }
+        ]
+      },
+      {
+        "id": 2725331,
+        "name": "Roof",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Tapered"
+          }
+        ]
+      },
+      {
+        "id": 2725332,
+        "name": "Shelving",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Full Length Shelves in Cargo Area - Both Sides"
+          },
+          {
+            "name": "Quantity",
+            "value": "4"
+          },
+          {
+            "name": "Location",
+            "value": "Interior"
+          }
+        ]
+      },
+      {
+        "id": 2725339,
+        "name": "Lock System",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Latchmatic Keyless Remote Locking System"
+          }
+        ]
+      },
+      {
+        "id": 2725340,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Style",
+            "value": "Dome"
+          },
+          {
+            "name": "Location",
+            "value": "Compartments"
+          }
+        ]
+      },
+      {
+        "id": 2725343,
+        "name": "Floor",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Diamond Plate"
+          },
+          {
+            "name": "Inside Width",
+            "value": "48.5\""
+          }
+        ]
+      },
+      {
+        "id": 2725351,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "LED"
+          },
+          {
+            "name": "Description",
+            "value": "S/T/T & B/U Lights"
+          },
+          {
+            "name": "Location",
+            "value": "Exterior"
+          }
+        ]
+      },
+      {
+        "id": 2725354,
+        "name": "Ladder Rack",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "with Ladder Guides & Webb Belts"
+          },
+          {
+            "name": "Style",
+            "value": "3 Bar"
+          }
+        ]
+      },
+      {
+        "id": 2725356,
+        "name": "Bumper",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Recessed Pooched"
+          },
+          {
+            "name": "Color",
+            "value": "White"
+          }
+        ]
+      },
+      {
+        "id": 2725357,
+        "name": "Hitch",
+        "attributes": [
+          {
+            "name": "Manufacturer",
+            "value": "Curt"
+          },
+          {
+            "name": "Type",
+            "value": "Receiver"
+          },
+          {
+            "name": "Class",
+            "value": "V"
+          },
+          {
+            "name": "Size",
+            "value": "2.5\""
+          },
+          {
+            "name": "Capacity",
+            "value": "20K"
+          }
+        ]
+      },
+      {
+        "id": 2725360,
+        "name": "Trailer Plug",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "7/4 Way"
+          }
+        ]
+      },
+      {
+        "id": 2725361,
+        "name": "Camera",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Factory Backup Camera"
+          }
+        ]
+      },
+      {
+        "id": 2725363,
+        "name": "Mud Flaps"
+      }
+    ],
+    "documents": [
+      {
+        "date": "2024-08-30",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-181b0e40-9822-4430-b92b-40a7a0a86a1f.pdf"
+      },
+      {
+        "date": "2024-09-11",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-cde6fe27-b2fe-4eaa-b6b0-2a42481a28ad.pdf"
+      }
+    ]
+  },
+
+   {
+    "_comment": "Extracted data from Quadrant",
+    "inventory_arrival_date": "2024-03-18",
+    "invoice_number": "6015994",
+    "bill_to": "50407\nCAPITAL FORD\n4800 CAPITAL BOULEVARD\nATTN: TED CECIL\nRALEIGH NC 27616",
+    "ship_to": "CAPITAL FORD-RALEIGH\n4800 CAPITAL BLVD\nRALEIGH NC 27616",
+    "vin": "1FD0X5HT1REC92857",
+    "distributor": "READING TRUCK EQUIPMENT, LLC",
+    "make": "FORD",
+    "model": "F550",
+    "year": "2024",
+    "invoice_date": "08/30/24",
+    "list_of_items": [
+      {
+        "description": "READING TPB72-132ADW, 11' CLASSIC II ALL STEEL PANEL BODY W/TAPERED TOP. 132\" L X 91 1/2\" W, W/72\" INSIDE CLEARANCE.",
+        "amount": ""
+      },
+      {
+        "description": "\"A\" COMPARTMENT LAYOUT, R/S & C/S .? (2) ADJ SHELVES, EACH FRONT VERT COMPT, (1) ADJ SHELF, EACH SECOND VERT COMPT, (1) ADJ SHELF EACH HORZ & EACH REAR VERT. 20 DIVIDERS. LATCHMATIC KEYLESS LOCKING, ALL DOORS. LED DOME LIGHTS IN SIDE COMPARTMENTS. TOP TAPERS TO 75\" W, W/ (4) 12\" D FULL LENGTH. (SOLID FRONT BULKHEAD) SHELVES IN CARGO AREA, R/S & C/S. SOLID FULL REAR LOCKING DOORS. 48.5\" WIDE LOAD SPACE, W/FLAT DP FLOOR. (2) INTERIOR DOME LIGHTS W/SWITCH AT REAR. HIDDEN HINGES, SS PADDLE LATCHES, ALL DOORS. NITROGEN STRUT DOOR HOLDERS, ALL VERT DOORS. LED REAR LIGHTS - S/T/T & BACKUP. (1) FUEL FILL - R/S REAR. E COAT IMMERSION PRIMER.",
+        "amount": ""
+      },
+      {
+        "description": "POWDER COAT WHITE FINISH. 6 YEAR LIMITED WARRANTY. (2) LED CEILING MOUNTED 5.5\" DOME LIGHTS, INSTALLED IN CARGO AREA. INCLUDES (1) ON/OFF RECESSED TOGGLE SWITCH MOUNTED INSIDE REAR DOOR. INCLUDE SPRING MOUNTING KIT. (REQUIRED FOR 4X4 APPLICATION.) BEFORE FINAL DELIVERY, INSTALLATION FACILITY WILL REFLASH THE BCM (BODY CONTROL MODULE). INTEGRATE OEM KEY FOB WITH LATCHMATIC SYSTEM.",
+        "amount": ""
+      },
+      {
+        "description": "3 BAR, BOLT-ON ROOF MOUNT LADDER RACK. W/LADDER GUIDES & WEBB BELTS. PC WHITE. CAPACITY - 250#, EVENLY DISTRIBUTED (2) BUYER'S FS2797CH - 7 1/4\" X 6 3/4\" CHROME PLATED CAST ALUM FOLDING STEPS & (1) 13\" CHROME GRAB HANDLE, INSTALLED C/S ON REAR BODY PANEL, UNLESS OTHERWISE NOTED. RECESSED POOCHED BUMPER - PC WHITE. CURT #15845, CLASS V FRAME MOUNT HITCH W/2 1/2\" RECEIVER. 20,000# WC, 2700# WT. (NEVER EXCEED OEM RECOMMENDED TOWING LIMITS)",
+        "amount": ""
+      },
+      {
+        "description": "PROVIDE HOPPY 40959, 7/4 WAY TRAILER RECEPTACLE. RELOCATE OEM PROVIDED BACK UP CAMERA. INSTALL FORD PROVIDED LOCKOUT KIT, TO REDUCE CAB DOOR OPENING ANGLE FROM 180 TO 90 DEGREES. ONE (1) PR READING LOGO MUDFLAPS. COMPETITIVE DISCOUNT.",
+        "amount": ""
+      },
+      {
+        "description": "GENERATE A WEIGHT SLIP FOR COMPLETED UNIT. GENERATE CERTIFICATION/ALTERATION LABEL AND/OR COMPLETE THE MSO WHEN APPLICABLE. ALL REQUIRED DOCUMENTATION FOR THE FINISHED UNIT IS TO BE SHIPPED TO CUSTOMER WITH VEHICLE. CUSTOMER PICKUP, NO CHARGE. CONTACT MOOSE LOGISTICS LLC FOR PICK-UP EQUIPMENT SN TPB72-132ADW 24745376.",
+        "amount": ""
+      },
+      {
+        "description": "KEYS# (5) J214 1 KEYLESS REMOTE 2 KEYLESS LATCHMATICS",
+        "amount": "32,741.00"
+      }
+    ],
+    "total_amount": 32300.0,
+    "file_path": "img/invoices/bodyinvoices/-/invoice-181b0e40-9822-4430-b92b-40a7a0a86a1f.pdf"
+  },
+  {
+    "inventory_arrival_date": "2024-03-08",
+    "stock_number": "4R6516",
+    "vin": "1FDRF3HT8RDA00819",
+    "condition": "New",
+    "model_year": "2024",
+    "make": "Ford",
+    "model": "F-350",
+    "body_type": "Stake Bed",
+    "body_line": "Stake Bed",
+    "body_manufacturer": "PJ's Truck Bodies",
+    "body_model": "12' Stake Bed",
+    "distributor": "PJ's Truck Bodies",
+    "distributor_location": "Dunn, NC 28335",
+    "invoice_date": "2024-03-07",
+    "components": [
+      {
+        "id": 2608989,
+        "name": "Body",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Width",
+            "value": "96\""
+          },
+          {
+            "name": "Length",
+            "value": "12'"
+          },
+          {
+            "name": "Color",
+            "value": "Black"
+          }
+        ]
+      },
+      {
+        "id": 2608990,
+        "name": "Brake Control",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Electric Brake"
+          }
+        ]
+      },
+      {
+        "id": 2608991,
+        "name": "Bulkhead",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "With Window"
+          },
+          {
+            "name": "Height",
+            "value": "42\""
+          }
+        ]
+      },
+      {
+        "id": 2608992,
+        "name": "Cab Shield",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "with (3) D-Rings"
+          },
+          {
+            "name": "Height",
+            "value": "42\""
+          }
+        ]
+      },
+      {
+        "id": 2608993,
+        "name": "Door",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Barn"
+          },
+          {
+            "name": "Description",
+            "value": "(2) Piece"
+          },
+          {
+            "name": "Height",
+            "value": "42\""
+          }
+        ]
+      },
+      {
+        "id": 2608994,
+        "name": "Floor",
+        "attributes": [
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Thickness",
+            "value": "3/16\""
+          }
+        ]
+      },
+      {
+        "id": 2608995,
+        "name": "Hitch",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "2-5/16\" Pintle Ball Combo 20K with D-Rings"
+          }
+        ]
+      },
+      {
+        "id": 2608996,
+        "name": "Hoist",
+        "attributes": [
+          {
+            "name": "Model",
+            "value": "GS615"
+          },
+          {
+            "name": "Type",
+            "value": "Electric/Hydraulic"
+          },
+          {
+            "name": "Description",
+            "value": "Scissor Hoist"
+          },
+          {
+            "name": "Style",
+            "value": "Single Acting"
+          }
+        ]
+      },
+      {
+        "id": 2608997,
+        "name": "Lighting",
+        "attributes": [
+          {
+            "name": "Style",
+            "value": "FMVSS"
+          }
+        ]
+      },
+      {
+        "id": 2608999,
+        "name": "Rub Rail"
+      },
+      {
+        "id": 2609000,
+        "name": "Side",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Lift Out Slats"
+          },
+          {
+            "name": "Description",
+            "value": "(4) Sections"
+          },
+          {
+            "name": "Height",
+            "value": "42\""
+          }
+        ]
+      },
+      {
+        "id": 2609001,
+        "name": "Stake Pockets",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "External Stake Pockets"
+          },
+          {
+            "name": "Location",
+            "value": "External"
+          }
+        ]
+      },
+      {
+        "id": 2609002,
+        "name": "Tarp",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Manual"
+          },
+          {
+            "name": "Description",
+            "value": "Pull Rope Tarp with Back Bar, Rear Hooks, and Mesh Tarp"
+          }
+        ]
+      },
+      {
+        "id": 2609037,
+        "name": "Toolbox",
+        "attributes": [
+          {
+            "name": "Type",
+            "value": "Under Body"
+          },
+          {
+            "name": "Quantity",
+            "value": "2"
+          },
+          {
+            "name": "Material",
+            "value": "Steel"
+          },
+          {
+            "name": "Height",
+            "value": "18\""
+          },
+          {
+            "name": "Length",
+            "value": "48\""
+          },
+          {
+            "name": "Depth",
+            "value": "18\""
+          },
+          {
+            "name": "Color",
+            "value": "Black"
+          }
+        ]
+      },
+      {
+        "id": 2609038,
+        "name": "Camera",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Factory Backup Camera"
+          }
+        ]
+      },
+      {
+        "id": 2609040,
+        "name": "Mud Flaps",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "with Anti-Sail Brackets"
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "date": "2024-06-18",
+        "type": "Invoice",
+        "path": "img/invoices/bodyinvoices/-/invoice-bc0c8b1a-84a2-4cd6-a1d2-0a8cc7476580.pdf"
+      }
+    ]
+  },
+  {
+    "_comment": "Extracted data from Quadrant",
+    "invoice_number": "0032167-IN",
+    "bill_to": "DARCARS LANHAM\n9020 LANHAM-SEVERN ROAD\nLanham, MD 20706-2922",
+    "ship_to": "DARCARS LANHAM\n9020 LANHAM-SEVERN ROAD\nLanham, MD 20706-2922",
+    "vin": "1FDRF3HT8RDA00819",
+    "distributor": "PJs TRUCK BODIES & EQUIPMENT CO.",
+    "make": "",
+    "model": "",
+    "year": "2024",
+    "invoice_date": "3/7/2024",
+    "list_of_items": [
+      {
+        "description": "MIKE'S QUOTE # ME10923.10 2024 F3H DIESEL 84\" CA PJTP # M814 VIN # 1FDRF3HT8RDA00819",
+        "amount": "3,330.00"
+      },
+      {
+        "description": "12' FLATBED (84\" CA) 7\" LONGSILLS, 3\" XMBRS, 12\" OC, 3/16\" SMOOTH STEEL FLOOR, OUTSIDE POCKETS w/ RUB RAIL",
+        "amount": "545.00"
+      },
+      {
+        "description": "42\" HEADBOARD w/ WINDOW",
+        "amount": "560.00"
+      },
+      {
+        "description": "42\" CAB SHIELD w/ (3) D-RINGS",
+        "amount": "1,595.00"
+      },
+      {
+        "description": "42\" SLATTED METAL SIDES (4) SECTIONS, ALL MUST BE ABLE TO BE LIFTED OUT",
+        "amount": "500.00"
+      },
+      {
+        "description": "2 PIECE BARN DOOR 42\" (H), SLATTED METAL",
+        "amount": "3,280.00"
+      },
+      {
+        "description": "GS615 EMSA SINGLE ACTING, ELECTRIC / HYDRAULIC",
+        "amount": "590.40"
+      },
+      {
+        "description": "STEEL SURCHARGE",
+        "amount": "525.00"
+      },
+      {
+        "description": "2-5/16\" PINTLE BALL COMBO 16K MOUNTED ON PLATE w/ D-RINGS, AS FAR TO REAR AS POSSIBLE",
+        "amount": "100.00"
+      },
+      {
+        "description": "7 PIN FLAT RECEPTACLE",
+        "amount": "535.00"
+      },
+      {
+        "description": "PULL ROPE TARP w/ BACK BAR w/ REAR HOOKS, MESH TARP",
+        "amount": "1,070.00"
+      },
+      {
+        "description": "18\" X 18\" X 48\" TOOLBOX, BLACK STEEL, UNDER BODY, ONE EACH SIDE",
+        "amount": "100.00"
+      },
+      {
+        "description": "INSTALL FACTORY BACK UP CAMERA",
+        "amount": "0.00"
+      },
+      {
+        "description": "POWDER COAT BLACK",
+        "amount": "0.00"
+      },
+      {
+        "description": "BACK-UP ALARM",
+        "amount": "0.00"
+      },
+      {
+        "description": "FMVSS LIGHTS",
+        "amount": "0.00"
+      },
+      {
+        "description": "MUD FLAPS w/ ANTI-SAIL BRACKET",
+        "amount": "107.80"
+      },
+      {
+        "description": "FUEL SURCHARGE",
+        "amount": ""
+      }
+    ],
+    "total_amount": 13163.2,
+    "file_path": "img/invoices/bodyinvoices/-/invoice-bc0c8b1a-84a2-4cd6-a1d2-0a8cc7476580.pdf"
+  }
+]

@@ -1,15 +1,18 @@
 import os
-from openai import AzureOpenAI # type: ignore
+from dotenv import load_dotenv
+load_dotenv()  # Load environment variables from .env
+
+from openai import AzureOpenAI  # type: ignore
 import json
-from azure.core.credentials import AzureKeyCredential # type: ignore
-from azure.ai.documentintelligence import DocumentIntelligenceClient # type: ignore
-from langchain_community.document_loaders import AzureAIDocumentIntelligenceLoader # type: ignore
+from azure.core.credentials import AzureKeyCredential  # type: ignore
+from azure.ai.documentintelligence import DocumentIntelligenceClient  # type: ignore
+from langchain_community.document_loaders import AzureAIDocumentIntelligenceLoader  # type: ignore
 import uuid
 from datetime import datetime
 from guidelines import guidelines
 
 
-#load body models from a text file
+# Load body models from file
 BODY_MODELS_FILE = "body_model.txt"
 
 def load_body_models():
@@ -25,20 +28,19 @@ def load_body_models():
 
 body_models = load_body_models()
 
-# Replace with your actual endpoint and key
-endpoint = "https://quaddocintelligence1.cognitiveservices.azure.com/"
-#key = #your api key
-training_folder = "../Training-pdf/"  # Path to your training folder
 
+# Load credentials from environment variables
+endpoint = os.getenv("AZURE_DOC_INTELLIGENCE_ENDPOINT")
+key = os.getenv("AZURE_DOC_INTELLIGENCE_KEY")
+
+openai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+subscription_key = os.getenv("AZURE_OPENAI_KEY")
+api_version = os.getenv("AZURE_OPENAI_API_VERSION")
+deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT")
+training_folder = "../Training-pdf/"
 analysis_features = ["ocrHighResolution"]
 
-# Azure OpenAI configuration
-openai_endpoint = "https://qtazureopenai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview"
-model_name = "gpt-4.1"
-deployment = "gpt-4.1"
-#subscription_key = #your api key
-api_version = "2024-12-01-preview"
-
+# Azure OpenAI client setup
 client = AzureOpenAI(
     api_version=api_version,
     azure_endpoint=openai_endpoint,

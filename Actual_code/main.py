@@ -1,27 +1,46 @@
 import os
-from openai import AzureOpenAI # type: ignore
+from dotenv import load_dotenv
+load_dotenv()  # Load environment variables from .env
+
+from openai import AzureOpenAI  # type: ignore
 import json
-from azure.core.credentials import AzureKeyCredential # type: ignore
-from azure.ai.documentintelligence import DocumentIntelligenceClient # type: ignore
-from langchain_community.document_loaders import AzureAIDocumentIntelligenceLoader # type: ignore
+from azure.core.credentials import AzureKeyCredential  # type: ignore
+from azure.ai.documentintelligence import DocumentIntelligenceClient  # type: ignore
+from langchain_community.document_loaders import AzureAIDocumentIntelligenceLoader  # type: ignore
 import uuid
 from datetime import datetime
 from guidelines import guidelines
 
-# Replace with your actual endpoint and key
-endpoint = "https://quaddocintelligence1.cognitiveservices.azure.com/"
-key = "53uBovu34ZLs4HFKjFo3nW3qDUh8utA0gBY3Q8BlcjpTkPmefnBWJQQJ99BEACYeBjFXJ3w3AAALACOGSie3"
-training_folder = "../Training-pdf/"  # Path to your training folder
 
+# Load body models from file
+BODY_MODELS_FILE = "body_model.txt"
+
+def load_body_models():
+    try:
+        with open(BODY_MODELS_FILE, 'r') as f:
+            return [line.strip() for line in f if line.strip()]
+    except FileNotFoundError:
+        print(f"Warning: Body models file {BODY_MODELS_FILE} not found")
+        return []
+    except Exception as e:
+        print(f"Error loading body models: {str(e)}")
+        return []
+
+body_models = load_body_models()
+
+
+# Load credentials from environment variables
+endpoint = os.getenv("AZURE_DOC_INTELLIGENCE_ENDPOINT")
+key = os.getenv("AZURE_DOC_INTELLIGENCE_KEY")
+
+openai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+subscription_key = os.getenv("AZURE_OPENAI_KEY")
+api_version = os.getenv("AZURE_OPENAI_API_VERSION")
+deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT")
+training_folder = "../Training-pdf/"
 analysis_features = ["ocrHighResolution"]
 
-# Azure OpenAI configuration
-openai_endpoint = "https://nikhi-mb4qln04-swedencentral.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview"
-model_name = "gpt-4o"
-deployment = "gpt-4o"
-subscription_key = "4prHi16lJv4qDEATOl11M4f99KCcnntffozdHXm2Umfq8t3KeWVJJQQJ99BEACfhMk5XJ3w3AAAAACOGEJ7N"
-api_version = "2025-01-01-preview"
-
+# Azure OpenAI client setup
 client = AzureOpenAI(
     api_version=api_version,
     azure_endpoint=openai_endpoint,
@@ -127,6 +146,52 @@ You are an expert vehicle invoice parser that extracts structured data from auto
 - path: "img/invoices/bodyinvoices/-/" + filename
 - date: Today's date (current date when processing)
 - type: Document type from invoice ("Invoice", "Quote", "Bill of Sale", etc.)
+
+**9. KNOWLEDGE BASE OF BODY MODELS:**
+Below is a list of known body models for reference when identifying the body_model from invoice text:
+""" + '\n'.join([f"- {model}" for model in body_models]) + """
+
+Instructions for extracting the body_model field:
+
+Exact Match:
+If the invoice text contains a body model name that exactly matches one from the knowledge base, return that exact match.
+
+Fuzzy/Similar Match:
+If no exact match is found, identify the most similar model name from the knowledge base. Accept close variations where the difference is minor (e.g., "16' Dry Van" vs "16' Composite Van"). Return the matched model name from the knowledge base.
+
+Annotated Variations (Optional):
+If the invoice text includes extra descriptive details (e.g., size, material), consider appending or preserving those details alongside the matched model name as additional context.
+
+No Match Found:
+If no close match exists in the knowledge base, return the original body_model text as it appears in the invoice.
+# Replace the current body model instructions with this more detailed version:
+
+**BODY MODEL EXTRACTION RULES:**
+
+1. **Exact Match Priority**:
+   - First look for EXACT matches (case-insensitive) between invoice text and known models
+   - Pay special attention to alphanumeric codes (like "PVMXT-263C", "782F") - these should match exactly or not at all
+
+2. **Partial Match Rules**:
+   For non-alphanumeric models (descriptive names), use these matching rules:
+   - Match if ≥80% of words appear in same order ("Pro Series" matches "9' Pro Series - Platform")
+   - Ignore measurements and dimensions when matching ("8'6" SK Deluxe" matches "SK Deluxe")
+   - Ignore punctuation and special characters
+
+3. **No Match Handling**:
+   - If no match found, return the FULL descriptive text from the invoice
+   - Never return a partial match for alphanumeric codes
+   - For descriptive names, you may return the closest match with original details in parentheses
+
+4. **Special Cases**:
+   - "Stake" models: Match both "PVMXT-263C Stake" and "PHHJT-123B Stake" to any mention of "Stake"
+   - Numeric models: "782F" should only match exactly "782F" or "782 F" (with space)
+   - Branded models: "Duracube" should match any mention of "Duracube" followed by numbers
+
+**KNOWN BODY MODELS:**
+""" + '\n'.join([f"- {model}" for model in body_models]) + """
+
+**CRITICAL: Return ONLY valid JSON - no markdown, no explanations, no additional text.**
 
 Return the JSON structure with all identified components and their specific attributes:
 {
@@ -320,4 +385,4 @@ Current date: {datetime.now().strftime('%Y-%m-%d')}
 with open("data.json", "w") as f:
     json.dump(all_data, f, indent=2)
 
-print(f"Processed {len(all_data)} files and saved to all_data.json")
+print(f"Processed {len(all_data)} files and saved to data.json")

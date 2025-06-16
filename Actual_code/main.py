@@ -27,7 +27,7 @@ body_models = load_body_models()
 
 # Replace with your actual endpoint and key
 endpoint = "https://quaddocintelligence1.cognitiveservices.azure.com/"
-key = "53uBovu34ZLs4HFKjFo3nW3qDUh8utA0gBY3Q8BlcjpTkPmefnBWJQQJ99BEACYeBjFXJ3w3AAALACOGSie3"
+key = #your api key
 training_folder = "../Training-pdf/"  # Path to your training folder
 
 analysis_features = ["ocrHighResolution"]
@@ -36,7 +36,7 @@ analysis_features = ["ocrHighResolution"]
 openai_endpoint = "https://qtazureopenai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview"
 model_name = "gpt-4.1"
 deployment = "gpt-4.1"
-subscription_key = "CrX7CkkTJlDSzIVR9LA8Y9OOcIj78frToJ4F4fhdP51wf2yZTBbrJQQJ99BEACYeBjFXJ3w3AAABACOGdrms"
+subscription_key = #your api key
 api_version = "2024-12-01-preview"
 
 client = AzureOpenAI(

@@ -332,7 +332,7 @@ def enforce_json_structure(data):
     return structured_data
 
 def display_extracted_data(data, filename):
-    """Display extracted data in a user-friendly format (same UI as before)"""
+    """Display extracted data with dynamic attribute editing capabilities"""
     # Initialize edited data for this file if not exists
     if filename not in st.session_state.edited_data:
         st.session_state.edited_data[filename] = enforce_json_structure({**data, "filename": filename})
@@ -342,7 +342,7 @@ def display_extracted_data(data, filename):
     st.subheader("Extracted Data")
     
     with st.container():
-        # Basic Information (same layout as before)
+        # Basic Information
         with st.expander("Basic Information", expanded=True):
             col1, col2 = st.columns(2)
             with col1:
@@ -383,7 +383,7 @@ def display_extracted_data(data, filename):
                     key=f"{filename}_model"
                 )
         
-        # Body Information (same layout as before)
+        # Body Information
         with st.expander("Body Information"):
             col1, col2 = st.columns(2)
             with col1:
@@ -409,7 +409,7 @@ def display_extracted_data(data, filename):
                     key=f"{filename}_body_model"
                 )
         
-        # Distributor Information (same layout as before)
+        # Distributor Information
         with st.expander("Distributor Information"):
             col1, col2 = st.columns(2)
             with col1:
@@ -425,7 +425,7 @@ def display_extracted_data(data, filename):
                     key=f"{filename}_distributor_location"
                 )
         
-        # Invoice Information (same layout as before)
+        # Invoice Information
         with st.expander("Invoice Information"):
             edited_data['invoice_date'] = st.text_input(
                 "Invoice Date", 
@@ -433,18 +433,80 @@ def display_extracted_data(data, filename):
                 key=f"{filename}_invoice_date"
             )
         
-        # Components (same layout as before)
+        # Components Section with dynamic editing
+        st.subheader("Components")
+        
+        # Add New Component Button
+        if st.button("➕ Add New Component", key=f"{filename}_add_component"):
+            if 'components' not in edited_data:
+                edited_data['components'] = []
+            edited_data['components'].append({
+                'name': 'New Component',
+                'attributes': [{'name': 'New Attribute', 'value': ''}]
+            })
+            st.rerun()
+        
+        # Display and edit existing components
         if 'components' in edited_data and edited_data['components']:
-            st.subheader("Components")
             for i, component in enumerate(edited_data['components']):
-                with st.expander(f"Component: {component.get('name', 'Unnamed')}"):
+                with st.expander(f"Component {i+1}: {component.get('name', 'Unnamed')}"):
+                    # Component name editing
+                    component['name'] = st.text_input(
+                        "Component Name",
+                        component.get('name', ''),
+                        key=f"{filename}_comp_{i}_name"
+                    )
+                    
+                    # Attributes section header
+                    st.markdown("**Attributes**")
+                    
+                    # Display and edit existing attributes
                     if 'attributes' in component and component['attributes']:
                         for j, attr in enumerate(component['attributes']):
+                            # Create columns for attribute name and delete button
+                            col_name, col_del = st.columns([4, 1])
+                            
+                            with col_name:
+                                # Attribute name editing
+                                attr['name'] = st.text_input(
+                                    "Attribute Name",
+                                    attr.get('name', ''),
+                                    key=f"{filename}_comp_{i}_attr_{j}_name"
+                                )
+                            
+                            with col_del:
+                                # Spacer for vertical alignment
+                                st.write("")
+                                # Delete button (trash icon only)
+                                if st.button("🗑️", 
+                                            key=f"{filename}_comp_{i}_attr_{j}_delete"):
+                                    component['attributes'].pop(j)
+                                    st.rerun()
+                            
+                            # Attribute value (full width below name+delete)
                             attr['value'] = st.text_input(
-                                f"{attr.get('name', 'Attribute')}", 
+                                "Value",
                                 attr.get('value', ''),
-                                key=f"{filename}_comp_{i}_attr_{j}"
+                                key=f"{filename}_comp_{i}_attr_{j}_value"
                             )
+                            
+                            # Divider between attributes (except after last one)
+                            if j < len(component['attributes']) - 1:
+                                st.markdown("---")
+                    
+                    # Add Attribute Button at the bottom of attributes section
+                    if st.button("➕ Add Attribute", 
+                                key=f"{filename}_comp_{i}_add_attr"):
+                        if 'attributes' not in component:
+                            component['attributes'] = []
+                        component['attributes'].append({'name': 'New Attribute', 'value': ''})
+                        st.rerun()
+                    
+                    # Delete component button at the bottom
+                    if st.button("🗑️ Delete Component", 
+                                key=f"{filename}_comp_{i}_delete"):
+                        edited_data['components'].pop(i)
+                        st.rerun()
     
     return edited_data
 

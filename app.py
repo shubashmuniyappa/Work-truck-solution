@@ -8,64 +8,255 @@ import shutil
 from copy import deepcopy
 from datetime import datetime
 
-# Set page config (same as before)
+# Set page config with blue theme
 st.set_page_config(
-    page_title="Vehicle Invoice Processing Portal",
+    page_title="Auto Invoice Processor",
     page_icon=":car:",
     layout="wide"
 )
 
-# Custom CSS for styling (same as before)
+# Custom CSS for blue theme styling with improved upload section
 st.markdown("""
     <style>
-    .stProgress > div > div > div > div {
-        background-color: #4CAF50;
+    /* ===== Main App Styles ===== */
+    .stApp {
+        background-color: #e6f2ff;  /* Light blue background */
     }
+    
+    /* ===== Typography ===== */
+    h1, h2, h3, h4, h5, h6 {
+        color: #003366 !important;  /* Dark blue headers */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333333;
+    }
+    
+    /* ===== Upload Section ===== */
+    .stFileUploader {
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+        border: 2px dashed #4da6ff;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+    
+    .stFileUploader:hover {
+        border-color: #0066cc;
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+    }
+    
+    .stFileUploader>div>div>div>div>span {
+        color: #003366 !important;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    
+    .stFileUploader>div>div>div>div>small {
+        color: #666666 !important;
+        font-size: 0.9rem;
+    }
+    
+    /* ===== Buttons ===== */
     .stButton>button {
-        background-color: #4CAF50;
-        color: white;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
+        background: linear-gradient(135deg, #1e90ff, #0066cc);
+        color: white !important;
+        border-radius: 8px;
+        padding: 0.6rem 1.6rem;
         border: none;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
     }
+    
     .stButton>button:hover {
-        background-color: #45a049;
+        background: linear-gradient(135deg, #0066cc, #004d99);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
+    
+    /* ===== File Cards ===== */
     .file-card {
-        padding: 1rem;
-        border-radius: 5px;
-        background-color: #f0f2f6;
-        margin-bottom: 0.5rem;
+        padding: 1.2rem;
+        border-radius: 8px;
+        background-color: white;
+        margin-bottom: 0.8rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        border-left: 4px solid #1e90ff;
+        transition: all 0.3s ease;
     }
+    
+    .file-card:hover {
+        transform: translateX(3px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* ===== Status Indicators ===== */
     .success {
-        color: #4CAF50;
+        color: #00aa55 !important;
+        font-weight: bold;
     }
+    
     .error {
-        color: #f44336;
+        color: #ff3333 !important;
+        font-weight: bold;
     }
+    
     .processing {
-        color: #FFA500;
+        color: #ff9900 !important;
+        font-weight: bold;
     }
-    .header {
-        color: #2c3e50;
-    }
+    
+    /* ===== Containers ===== */
     .pdf-container {
         height: 600px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        border: 2px solid #b3d9ff;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
+    
     .pdf-iframe {
         width: 100%;
         height: 600px;
         border: none;
     }
+    
     .data-container {
         height: 600px;
         overflow-y: auto;
-        padding: 10px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        border: 2px solid #b3d9ff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    
+    /* ===== Expanders ===== */
+    .streamlit-expanderHeader {
+        background-color: #cce6ff !important;
+        border-radius: 8px !important;
+        padding: 0.7rem 1.2rem !important;
+        font-weight: bold !important;
+        color: #003366 !important;
+    }
+    
+    .streamlit-expanderContent {
+        background-color: #f5faff !important;
+        border-radius: 0 0 8px 8px !important;
+        padding: 1.2rem !important;
+    }
+    
+    /* ===== Input Fields ===== */
+    /* Text inputs */
+    .stTextInput>div>div>input {
+        background-color: white !important;
+        border: 1px solid #99ccff !important;
+        border-radius: 6px !important;
+        color: #003366 !important;
+        padding: 8px 12px !important;
+    }
+    
+    .stTextInput>div>div>input:focus {
+        border: 1px solid #0066cc !important;
+        box-shadow: 0 0 0 2px rgba(0,102,204,0.2) !important;
+    }
+    
+    /* Select boxes */
+    .stSelectbox>div>div>select {
+        background-color: white !important;
+        border: 1px solid #99ccff !important;
+        border-radius: 6px !important;
+        color: #003366 !important;
+        padding: 8px 12px !important;
+    }
+    
+    /* Text areas */
+    .stTextArea>div>div>textarea {
+        background-color: white !important;
+        border: 1px solid #99ccff !important;
+        border-radius: 6px !important;
+        color: #003366 !important;
+        padding: 8px 12px !important;
+    }
+    
+    /* Number inputs */
+    .stNumberInput>div>div>input {
+        background-color: white !important;
+        border: 1px solid #99ccff !important;
+        border-radius: 6px !important;
+        color: #003366 !important;
+        padding: 8px 12px !important;
+    }
+    
+    /* Date inputs */
+    .stDateInput>div>div>input {
+        background-color: white !important;
+        border: 1px solid #99ccff !important;
+        border-radius: 6px !important;
+        color: #003366 !important;
+        padding: 8px 12px !important;
+    }
+    
+    /* ===== Progress Bar ===== */
+    .stProgress>div>div>div {
+        background: linear-gradient(90deg, #1e90ff, #66b3ff) !important;
+        border-radius: 4px;
+    }
+    
+    /* ===== Section Headers ===== */
+    .section-header {
+        background: linear-gradient(90deg, #cce6ff, #e6f2ff);
+        padding: 12px 18px;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        border-left: 5px solid #0066cc;
+        font-weight: bold;
+    }
+    
+    /* ===== Tooltips ===== */
+    .stTooltip {
+        background-color: #003366 !important;
+        color: white !important;
+        border-radius: 6px !important;
+    }
+    
+    /* ===== Dataframe Styling ===== */
+    .stDataFrame {
+        border-radius: 8px !important;
+        border: 1px solid #b3d9ff !important;
+    }
+    
+    /* ===== Radio Buttons ===== */
+    .stRadio>div>div>label>div {
+        color: #003366 !important;
+    }
+    
+    /* ===== Checkboxes ===== */
+    .stCheckbox>div>div>label>div {
+        color: #003366 !important;
+    }
+    
+    /* ===== Sliders ===== */
+    .stSlider>div>div>div>div {
+        background-color: #1e90ff !important;
+    }
+    
+    /* ===== Sidebar (if used) ===== */
+    [data-testid="stSidebar"] {
+        background-color: #003366 !important;
+    }
+    
+    [data-testid="stSidebar"] .stButton>button {
+        background: linear-gradient(135deg, #66b3ff, #1e90ff);
     }
     </style>
     """, unsafe_allow_html=True)
+
 
 # Initialize session state (same as before)
 if 'processed_data' not in st.session_state:
@@ -418,7 +609,7 @@ def main():
         with col3:
             st.write(f"File {current_index + 1} of {len(filenames)}: {current_filename}")
         with col4:
-            if st.button("Finish & Reset"):
+            if st.button("Finish Processing"):
                 reset_processing()
                 return
         

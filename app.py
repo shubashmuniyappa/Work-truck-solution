@@ -8,24 +8,24 @@ import shutil
 from copy import deepcopy
 from datetime import datetime
 
-# Set page config with blue theme
+# Set page config with original blue theme
 st.set_page_config(
     page_title="Auto Invoice Processor",
     page_icon=":car:",
     layout="wide"
 )
 
-# Custom CSS for blue theme styling with improved upload section
+# Updated CSS with improved PDF container styling
+# Updated CSS with improved PDF container styling and white background for extracted text
 st.markdown("""
     <style>
     /* ===== Main App Styles ===== */
     .stApp {
-        background-color: #e6f2ff;  /* Light blue background */
+        background-color: #e6f2ff;
     }
     
-    /* ===== Typography ===== */
     h1, h2, h3, h4, h5, h6 {
-        color: #003366 !important;  /* Dark blue headers */
+        color: #003366 !important;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
@@ -49,17 +49,6 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
     }
     
-    .stFileUploader>div>div>div>div>span {
-        color: #003366 !important;
-        font-weight: bold;
-        font-size: 1.1rem;
-    }
-    
-    .stFileUploader>div>div>div>div>small {
-        color: #666666 !important;
-        font-size: 0.9rem;
-    }
-    
     /* ===== Buttons ===== */
     .stButton>button {
         background: linear-gradient(135deg, #1e90ff, #0066cc);
@@ -69,14 +58,6 @@ st.markdown("""
         border: none;
         font-weight: bold;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-        font-size: 0.95rem;
-    }
-    
-    .stButton>button:hover {
-        background: linear-gradient(135deg, #0066cc, #004d99);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
     
     /* ===== File Cards ===== */
@@ -87,12 +68,6 @@ st.markdown("""
         margin-bottom: 0.8rem;
         box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         border-left: 4px solid #1e90ff;
-        transition: all 0.3s ease;
-    }
-    
-    .file-card:hover {
-        transform: translateX(3px);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     
     /* ===== Status Indicators ===== */
@@ -111,21 +86,23 @@ st.markdown("""
         font-weight: bold;
     }
     
-    /* ===== Containers ===== */
-    .pdf-container {
+    /* ===== PDF Container ===== */
+    .pdf-container-wrapper {
+        width: 100%;
         height: 600px;
         border: 2px solid #b3d9ff;
         border-radius: 10px;
         background-color: white;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        overflow: hidden;
     }
     
     .pdf-iframe {
         width: 100%;
-        height: 600px;
+        height: 100%;
         border: none;
     }
     
+    /* ===== Data Container ===== */
     .data-container {
         height: 600px;
         overflow-y: auto;
@@ -133,132 +110,33 @@ st.markdown("""
         background-color: white;
         border-radius: 10px;
         border: 2px solid #b3d9ff;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
     
-    /* ===== Expanders ===== */
-    .streamlit-expanderHeader {
-        background-color: #cce6ff !important;
-        border-radius: 8px !important;
-        padding: 0.7rem 1.2rem !important;
-        font-weight: bold !important;
-        color: #003366 !important;
-    }
-    
-    .streamlit-expanderContent {
-        background-color: #f5faff !important;
-        border-radius: 0 0 8px 8px !important;
-        padding: 1.2rem !important;
-    }
-    
-    /* ===== Input Fields ===== */
-    /* Text inputs */
-    .stTextInput>div>div>input {
+    /* ===== Extracted Text Elements ===== */
+    .stTextInput input, .stTextArea textarea, .stSelectbox select {
         background-color: white !important;
-        border: 1px solid #99ccff !important;
-        border-radius: 6px !important;
-        color: #003366 !important;
-        padding: 8px 12px !important;
     }
     
-    .stTextInput>div>div>input:focus {
-        border: 1px solid #0066cc !important;
-        box-shadow: 0 0 0 2px rgba(0,102,204,0.2) !important;
-    }
-    
-    /* Select boxes */
-    .stSelectbox>div>div>select {
-        background-color: white !important;
-        border: 1px solid #99ccff !important;
-        border-radius: 6px !important;
-        color: #003366 !important;
-        padding: 8px 12px !important;
-    }
-    
-    /* Text areas */
-    .stTextArea>div>div>textarea {
-        background-color: white !important;
-        border: 1px solid #99ccff !important;
-        border-radius: 6px !important;
-        color: #003366 !important;
-        padding: 8px 12px !important;
-    }
-    
-    /* Number inputs */
-    .stNumberInput>div>div>input {
-        background-color: white !important;
-        border: 1px solid #99ccff !important;
-        border-radius: 6px !important;
-        color: #003366 !important;
-        padding: 8px 12px !important;
-    }
-    
-    /* Date inputs */
-    .stDateInput>div>div>input {
-        background-color: white !important;
-        border: 1px solid #99ccff !important;
-        border-radius: 6px !important;
-        color: #003366 !important;
-        padding: 8px 12px !important;
-    }
-    
-    /* ===== Progress Bar ===== */
-    .stProgress>div>div>div {
-        background: linear-gradient(90deg, #1e90ff, #66b3ff) !important;
-        border-radius: 4px;
-    }
-    
-    /* ===== Section Headers ===== */
-    .section-header {
-        background: linear-gradient(90deg, #cce6ff, #e6f2ff);
-        padding: 12px 18px;
+    .st-expander {
+        background-color: white;
         border-radius: 8px;
-        margin-bottom: 18px;
-        border-left: 5px solid #0066cc;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #b3d9ff;
+    }
+    
+    .st-expander .streamlit-expanderHeader {
+        color: #003366 !important;
         font-weight: bold;
     }
     
-    /* ===== Tooltips ===== */
-    .stTooltip {
-        background-color: #003366 !important;
-        color: white !important;
-        border-radius: 6px !important;
-    }
-    
-    /* ===== Dataframe Styling ===== */
-    .stDataFrame {
-        border-radius: 8px !important;
-        border: 1px solid #b3d9ff !important;
-    }
-    
-    /* ===== Radio Buttons ===== */
-    .stRadio>div>div>label>div {
-        color: #003366 !important;
-    }
-    
-    /* ===== Checkboxes ===== */
-    .stCheckbox>div>div>label>div {
-        color: #003366 !important;
-    }
-    
-    /* ===== Sliders ===== */
-    .stSlider>div>div>div>div {
-        background-color: #1e90ff !important;
-    }
-    
-    /* ===== Sidebar (if used) ===== */
-    [data-testid="stSidebar"] {
-        background-color: #003366 !important;
-    }
-    
-    [data-testid="stSidebar"] .stButton>button {
-        background: linear-gradient(135deg, #66b3ff, #1e90ff);
+    .stTextInput>div>div>input, .stTextArea>div>div>textarea {
+        background-color: white !important;
     }
     </style>
     """, unsafe_allow_html=True)
 
-
-# Initialize session state (same as before)
+# Initialize session state
 if 'processed_data' not in st.session_state:
     st.session_state.processed_data = {}
 if 'uploaded_files' not in st.session_state:
@@ -276,7 +154,7 @@ if 'files_to_save' not in st.session_state:
 if 'edited_data' not in st.session_state:
     st.session_state.edited_data = {}
 
-# Define the exact field order we want in the JSON output
+# Field order
 JSON_FIELD_ORDER = [
     "inventory_arrival_date",
     "stock_number", 
@@ -297,43 +175,23 @@ JSON_FIELD_ORDER = [
 ]
 
 def enforce_json_structure(data):
-    """Ensure the JSON output follows our exact required structure"""
+    """Ensure JSON follows required structure"""
     structured_data = {}
-    
-    # Add fields in the exact order we want
     for field in JSON_FIELD_ORDER:
-        if field in data:
-            structured_data[field] = data[field]
-        else:
-            # Provide appropriate defaults
-            structured_data[field] = "" if field != "components" else []
+        structured_data[field] = data.get(field, "" if field != "components" else [])
     
-    # Ensure components structure exists
-    if "components" not in structured_data:
-        structured_data["components"] = []
-    
-    # Ensure documents structure exists with current date
     current_date = datetime.now().strftime('%Y-%m-%d')
-    if "documents" not in structured_data or not isinstance(structured_data["documents"], list):
+    if "documents" not in structured_data:
         structured_data["documents"] = [{
             "date": current_date,
             "type": "Invoice",
             "path": f"img/invoices/bodyinvoices/-/{data.get('filename', '')}"
         }]
-    else:
-        # Update existing document entry
-        if not isinstance(structured_data["documents"][0], dict):
-            structured_data["documents"][0] = {}
-        structured_data["documents"][0]["date"] = current_date
-        structured_data["documents"][0]["type"] = "Invoice"
-        if "path" not in structured_data["documents"][0]:
-            structured_data["documents"][0]["path"] = f"img/invoices/bodyinvoices/-/{data.get('filename', '')}"
     
     return structured_data
 
 def display_extracted_data(data, filename):
-    """Display extracted data with dynamic attribute editing capabilities"""
-    # Initialize edited data for this file if not exists
+    """Display and allow editing of extracted data"""
     if filename not in st.session_state.edited_data:
         st.session_state.edited_data[filename] = enforce_json_structure({**data, "filename": filename})
     
@@ -433,10 +291,9 @@ def display_extracted_data(data, filename):
                 key=f"{filename}_invoice_date"
             )
         
-        # Components Section with dynamic editing
+        # Components Section
         st.subheader("Components")
         
-        # Add New Component Button
         if st.button("➕ Add New Component", key=f"{filename}_add_component"):
             if 'components' not in edited_data:
                 edited_data['components'] = []
@@ -446,115 +303,88 @@ def display_extracted_data(data, filename):
             })
             st.rerun()
         
-        # Display and edit existing components
-        if 'components' in edited_data and edited_data['components']:
+        if 'components' in edited_data:
             for i, component in enumerate(edited_data['components']):
                 with st.expander(f"Component {i+1}: {component.get('name', 'Unnamed')}"):
-                    # Component name editing
                     component['name'] = st.text_input(
                         "Component Name",
                         component.get('name', ''),
                         key=f"{filename}_comp_{i}_name"
                     )
                     
-                    # Attributes section header
                     st.markdown("**Attributes**")
                     
-                    # Display and edit existing attributes
-                    if 'attributes' in component and component['attributes']:
+                    if 'attributes' in component:
                         for j, attr in enumerate(component['attributes']):
-                            # Create columns for attribute name and delete button
                             col_name, col_del = st.columns([4, 1])
-                            
                             with col_name:
-                                # Attribute name editing
                                 attr['name'] = st.text_input(
                                     "Attribute Name",
                                     attr.get('name', ''),
                                     key=f"{filename}_comp_{i}_attr_{j}_name"
                                 )
-                            
                             with col_del:
-                                # Spacer for vertical alignment
                                 st.write("")
-                                # Delete button (trash icon only)
-                                if st.button("🗑️", 
-                                            key=f"{filename}_comp_{i}_attr_{j}_delete"):
+                                if st.button("🗑️", key=f"{filename}_comp_{i}_attr_{j}_delete"):
                                     component['attributes'].pop(j)
                                     st.rerun()
                             
-                            # Attribute value (full width below name+delete)
                             attr['value'] = st.text_input(
                                 "Value",
                                 attr.get('value', ''),
                                 key=f"{filename}_comp_{i}_attr_{j}_value"
                             )
                             
-                            # Divider between attributes (except after last one)
                             if j < len(component['attributes']) - 1:
                                 st.markdown("---")
                     
-                    # Add Attribute Button at the bottom of attributes section
-                    if st.button("➕ Add Attribute", 
-                                key=f"{filename}_comp_{i}_add_attr"):
+                    if st.button("➕ Add Attribute", key=f"{filename}_comp_{i}_add_attr"):
                         if 'attributes' not in component:
                             component['attributes'] = []
                         component['attributes'].append({'name': 'New Attribute', 'value': ''})
                         st.rerun()
                     
-                    # Delete component button at the bottom
-                    if st.button("🗑️ Delete Component", 
-                                key=f"{filename}_comp_{i}_delete"):
+                    if st.button("🗑️ Delete Component", key=f"{filename}_comp_{i}_delete"):
                         edited_data['components'].pop(i)
                         st.rerun()
     
     return edited_data
 
 def save_data(filename, edited_data):
-    """Save the processed data to JSON file with exact structure"""
+    """Save processed data to JSON file"""
     try:
         output_dir = "processed_output"
         os.makedirs(output_dir, exist_ok=True)
-        
         output_path = os.path.join(output_dir, f"{os.path.splitext(filename)[0]}.json")
         
-        # Enforce the JSON structure before saving
-        structured_data = enforce_json_structure({**edited_data, "filename": filename})
-        
         with open(output_path, "w") as f:
-            json.dump(structured_data, f, indent=2)
+            json.dump(enforce_json_structure({**edited_data, "filename": filename}), f, indent=2)
         
         st.session_state.saved_files.append(output_path)
-        st.success(f"Data for {filename} saved successfully to {output_path}!")
+        st.session_state.files_to_save.discard(filename)
+        st.success(f"Saved {filename} successfully!")
         return True
     except Exception as e:
-        st.error(f"Error saving data: {e}")
+        st.error(f"Error saving {filename}: {e}")
         return False
 
 def save_all_data():
-    """Save all processed files that haven't been saved yet"""
+    """Save all processed files"""
     if not st.session_state.processed_data:
         st.warning("No files to save!")
         return False
     
     success_count = 0
-    with st.spinner("Saving all files..."):
-        # Create a list copy to avoid modification during iteration
-        files_to_save = list(st.session_state.files_to_save)
-        
-        for filename in files_to_save:
-            if filename in st.session_state.edited_data:
-                if save_data(filename, st.session_state.edited_data[filename]):
-                    success_count += 1
-                    # Remove from set after successful save
-                    st.session_state.files_to_save.discard(filename)
+    for filename in list(st.session_state.files_to_save):
+        if save_data(filename, st.session_state.edited_data[filename]):
+            success_count += 1
     
     if success_count > 0:
-        st.success(f"Successfully saved {success_count} file(s)!")
+        st.success(f"Saved {success_count} file(s)!")
     return success_count > 0
 
 def reset_processing():
-    """Reset the processing state to allow new files"""
+    """Reset processing state"""
     st.session_state.processed_data = {}
     st.session_state.uploaded_files = []
     st.session_state.current_file_index = 0
@@ -570,17 +400,13 @@ def main():
     st.title("Vehicle Invoice Processing Portal")
     st.markdown("Transform complex vehicle invoices into organized, actionable information.")
 
-    # Initialize processor
     processor = InvoiceProcessor()
 
-    # Step 1: Invoice Upload
+    # Step 1: Upload
     st.header("1. Invoice Upload")
-    
-    # If we have processed files, show option to add more
-    if st.session_state.processed_data:
-        if st.button("Add More Files"):
-            reset_processing()
-            return
+    if st.session_state.processed_data and st.button("Add More Files"):
+        reset_processing()
+        return
     
     uploaded_files = st.file_uploader(
         "Upload Invoice PDF(s)", 
@@ -593,119 +419,180 @@ def main():
         st.session_state.uploaded_files = uploaded_files
         st.success(f"{len(uploaded_files)} file(s) uploaded successfully!")
         
-        # Display file list
-        st.subheader("Files to Process")
+        # Initialize status
         for file in uploaded_files:
-            st.markdown(f"""
-            <div class="file-card">
-                <strong>{file.name}</strong> - <span class="processing">Ready to Process</span>
-            </div>
-            """, unsafe_allow_html=True)
+            st.session_state.processing_status[file.name] = {
+                'status': 'Ready to Process',
+                'message': ''
+            }
 
-        # Process button
+        # Display files
+        status_container = st.container()
+        with status_container:
+            st.subheader("Processing Status")
+            status_placeholders = {}
+            for file in uploaded_files:
+                status_placeholders[file.name] = st.empty()
+                with status_placeholders[file.name]:
+                    status = st.session_state.processing_status[file.name]
+                    st.markdown(f"""
+                    <div class="file-card">
+                        <strong>{file.name}</strong> - 
+                        <span class="success">{status['status']}</span>
+                        {f"<br><small>{status['message']}</small>" if status['message'] else ""}
+                    </div>
+                    """, unsafe_allow_html=True)
+
         if st.button("Start Processing", key="process_btn"):
-            with st.spinner("Processing invoices..."):
-                # Create temp directory if it doesn't exist
-                if not st.session_state.temp_dir:
-                    st.session_state.temp_dir = tempfile.mkdtemp()
-                
-                file_paths = []
-                
-                for file in uploaded_files:
-                    file_path = os.path.join(st.session_state.temp_dir, file.name)
-                    with open(file_path, "wb") as f:
-                        f.write(file.getbuffer())
-                    file_paths.append(file_path)
-                    st.session_state.processing_status[file.name] = "Processing"
-                
-                # Process files and enforce structure immediately
-                results = processor.process_invoices(file_paths)
-                structured_results = {}
-                for filename, data in results.items():
-                    structured_results[filename] = enforce_json_structure({**data, "filename": filename})
-                
-                st.session_state.processed_data = structured_results
-                st.session_state.files_to_save = set(structured_results.keys())
-                st.session_state.edited_data = {k: deepcopy(v) for k, v in structured_results.items()}
+            if not st.session_state.temp_dir:
+                st.session_state.temp_dir = tempfile.mkdtemp()
+            
+            file_paths = []
+            for file in uploaded_files:
+                path = os.path.join(st.session_state.temp_dir, file.name)
+                with open(path, "wb") as f:
+                    f.write(file.getbuffer())
+                file_paths.append(path)
+            
+            # Process files
+            results = {}
+            progress_bar = st.progress(0)
+            for i, path in enumerate(file_paths):
+                filename = os.path.basename(path)
                 
                 # Update status
-                for filename in structured_results:
-                    st.session_state.processing_status[filename] = "Completed"
+                st.session_state.processing_status[filename] = {
+                    'status': 'Processing',
+                    'message': f'Processing file {i+1} of {len(file_paths)}'
+                }
+                progress_bar.progress(int((i+1)/len(file_paths)*100))
                 
-                st.success("Processing completed!")
-                st.session_state.current_file_index = 0
-                st.rerun()
+                # Update UI
+                with status_container:
+                    with status_placeholders[filename]:
+                        status = st.session_state.processing_status[filename]
+                        st.markdown(f"""
+                        <div class="file-card">
+                            <strong>{filename}</strong> - 
+                            <span class="processing">{status['status']}</span>
+                            <br><small>{status['message']}</small>
+                        </div>
+                        """, unsafe_allow_html=True)
+                
+                try:
+                    # Process file using process_invoices()
+                    file_results = processor.process_invoices([path])
+                    if file_results and filename in file_results:
+                        results[filename] = enforce_json_structure({
+                            **file_results[filename],
+                            "filename": filename
+                        })
+                        st.session_state.processing_status[filename] = {
+                            'status': 'Completed',
+                            'message': 'Extraction successful'
+                        }
+                    else:
+                        raise Exception("No results returned")
+                except Exception as e:
+                    st.session_state.processing_status[filename] = {
+                        'status': 'Error',
+                        'message': f'Processing failed: {str(e)}'
+                    }
+                
+                # Update UI
+                with status_container:
+                    with status_placeholders[filename]:
+                        status = st.session_state.processing_status[filename]
+                        status_class = "success" if status['status'] == "Completed" else "error"
+                        st.markdown(f"""
+                        <div class="file-card">
+                            <strong>{filename}</strong> - 
+                            <span class="{status_class}">{status['status']}</span>
+                            <br><small>{status['message']}</small>
+                        </div>
+                        """, unsafe_allow_html=True)
+            
+            st.session_state.processed_data = results
+            st.session_state.files_to_save = set(results.keys())
+            st.session_state.edited_data = {k: deepcopy(v) for k, v in results.items()}
+            st.success("Processing completed!")
+            st.session_state.current_file_index = 0
+            st.rerun()
 
-    # Step 2: Processing Progress
-    if st.session_state.get('processing_status'):
-        st.header("2. Processing Status")
-        
-        for filename, status in st.session_state.processing_status.items():
-            saved_status = " (Saved)" if filename not in st.session_state.files_to_save else ""
-            status_class = "success" if status == "Completed" else "processing"
-            st.markdown(f"""
-            <div class="file-card">
-                <strong>{filename}</strong> - <span class="{status_class}">{status}{saved_status}</span>
-            </div>
-            """, unsafe_allow_html=True)
-
-    # Step 3: Results Display
+    # Step 2: Results
     if st.session_state.processed_data:
-        st.header("3. Review Extracted Data")
-        
-        # Navigation controls
+        st.header("2. Review Extracted Data")
         filenames = list(st.session_state.processed_data.keys())
-        current_index = st.session_state.current_file_index
-        current_filename = filenames[current_index]
-        current_data = st.session_state.processed_data[current_filename]
+        idx = st.session_state.current_file_index
+        current_file = filenames[idx]
+        current_data = st.session_state.processed_data[current_file]
         
-        col1, col2, col3, col4 = st.columns([1, 1, 2, 1])
+        # Show current file status
+        status_info = st.session_state.processing_status.get(current_file, {'status': 'Unknown', 'message': ''})
+        status_class = "success" if status_info['status'] == "Completed" else "error" if status_info['status'] == "Error" else "processing"
+        st.markdown(f"""
+        <div class="file-card" style="margin-bottom: 20px;">
+            <strong>Current File:</strong> {current_file} - 
+            <span class="{status_class}">{status_info['status']}</span>
+            {f"<br><small>{status_info['message']}</small>" if status_info['message'] else ""}
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Navigation
+        col1, col2, col3, col4 = st.columns([1,1,2,1])
         with col1:
-            if st.button("⏮ Previous") and current_index > 0:
+            if st.button("⏮ Previous") and idx > 0:
                 st.session_state.current_file_index -= 1
                 st.rerun()
         with col2:
-            if st.button("Next ⏭") and current_index < len(filenames) - 1:
+            if st.button("Next ⏭") and idx < len(filenames)-1:
                 st.session_state.current_file_index += 1
                 st.rerun()
         with col3:
-            st.write(f"File {current_index + 1} of {len(filenames)}: {current_filename}")
+            st.write(f"File {idx+1} of {len(filenames)}")
         with col4:
             if st.button("Finish Processing"):
                 reset_processing()
                 return
         
-        # Split view - properly aligned
+        # Display
         col_left, col_right = st.columns(2)
-        
         with col_left:
             st.subheader("Original Invoice")
-            st.markdown(f'<div class="pdf-container"><iframe class="pdf-iframe" src="data:application/pdf;base64,{base64.b64encode(open(os.path.join(st.session_state.temp_dir, current_filename), "rb").read()).decode("utf-8")}"></iframe></div>', unsafe_allow_html=True)
+            pdf_path = os.path.join(st.session_state.temp_dir, current_file)
+            with open(pdf_path, "rb") as f:
+                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+            
+            pdf_display = f"""
+            <div class="pdf-container-wrapper">
+                <iframe class="pdf-iframe" src="data:application/pdf;base64,{base64_pdf}"></iframe>
+            </div>
+            """
+            st.markdown(pdf_display, unsafe_allow_html=True)
         
         with col_right:
             st.subheader("Extracted Data")
-            with st.container():
-                edited_data = display_extracted_data(current_data, current_filename)
+            edited_data = display_extracted_data(current_data, current_file)
             
-            # Save buttons
-            col_save1, col_save2 = st.columns(2)
-            with col_save1:
-                if st.button("💾 Save Current File", key=f"save_{current_filename}"):
-                    if save_data(current_filename, edited_data):
+            col_s1, col_s2 = st.columns(2)
+            with col_s1:
+                if st.button("💾 Save Current File", key=f"save_{current_file}"):
+                    if save_data(current_file, edited_data):
                         st.rerun()
-            with col_save2:
+            with col_s2:
                 if st.button("💾 Save All Files", key="save_all"):
                     if save_all_data():
                         st.rerun()
 
-    # Show saved files section
+    # Saved files
     if st.session_state.saved_files:
         st.header("Saved Files")
-        for saved_file in st.session_state.saved_files:
+        for path in st.session_state.saved_files:
             st.markdown(f"""
             <div class="file-card">
-                <strong>{os.path.basename(saved_file)}</strong> - <span class="success">Saved</span>
-                <br><small>{saved_file}</small>
+                <strong>{os.path.basename(path)}</strong> - 
+                <span class="success">Saved</span>
+                <br><small>{path}</small>
             </div>
             """, unsafe_allow_html=True)
 

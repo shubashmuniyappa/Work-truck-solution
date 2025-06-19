@@ -15,7 +15,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# Updated CSS with improved PDF container styling
 # Updated CSS with improved PDF container styling and white background for extracted text
 st.markdown("""
     <style>
@@ -133,6 +132,37 @@ st.markdown("""
     .stTextInput>div>div>input, .stTextArea>div>div>textarea {
         background-color: white !important;
     }
+    
+    /* Completion screen styles */
+    .completion-screen {
+        text-align: center;
+        padding: 3rem;
+        background-color: white;
+        border-radius: 15px;
+        margin: 2rem 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .completion-title {
+        color: #00aa55;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .completion-button {
+        margin: 1rem auto;
+        min-width: 200px;
+        max-width: 300px;
+    }
+    
+    /* Save confirmation styles */
+    .save-confirmation {
+        padding: 12px;
+        background-color: #f0fff4;
+        border-radius: 8px;
+        border-left: 4px solid #00aa55;
+        margin: 10px 0;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -153,6 +183,12 @@ if 'files_to_save' not in st.session_state:
     st.session_state.files_to_save = set()
 if 'edited_data' not in st.session_state:
     st.session_state.edited_data = {}
+if 'processing_completed' not in st.session_state:
+    st.session_state.processing_completed = False
+if 'last_saved_file' not in st.session_state:
+    st.session_state.last_saved_file = None
+if 'last_save_time' not in st.session_state:
+    st.session_state.last_save_time = None
 
 # Field order
 JSON_FIELD_ORDER = [
@@ -362,54 +398,62 @@ def save_data(filename, edited_data):
         
         st.session_state.saved_files.append(output_path)
         st.session_state.files_to_save.discard(filename)
-        st.success(f"Saved {filename} successfully!")
+        st.session_state.last_saved_file = filename
+        st.session_state.last_save_time = datetime.now().strftime("%H:%M:%S")
+        
+        # Show toast notification
+        st.toast(f"✅ File saved successfully at: {output_path}", icon="✅")
+        
         return True
     except Exception as e:
         st.error(f"Error saving {filename}: {e}")
         return False
 
-def save_all_data():
-    """Save all processed files"""
-    if not st.session_state.processed_data:
-        st.warning("No files to save!")
-        return False
-    
-    success_count = 0
-    for filename in list(st.session_state.files_to_save):
-        if save_data(filename, st.session_state.edited_data[filename]):
-            success_count += 1
-    
-    if success_count > 0:
-        st.success(f"Saved {success_count} file(s)!")
-    return success_count > 0
-
 def reset_processing():
-    """Reset processing state"""
+    """Reset processing state while preserving saved files"""
     st.session_state.processed_data = {}
     st.session_state.uploaded_files = []
     st.session_state.current_file_index = 0
     st.session_state.processing_status = {}
     st.session_state.edited_data = {}
+    st.session_state.files_to_save = set()
+    st.session_state.last_saved_file = None
+    st.session_state.last_save_time = None
     if st.session_state.temp_dir and os.path.exists(st.session_state.temp_dir):
         shutil.rmtree(st.session_state.temp_dir)
     st.session_state.temp_dir = None
-    st.session_state.files_to_save = set()
-    st.rerun()
+    st.session_state.processing_completed = False
+
+def show_completion_screen():
+    """Display the completion screen with option to process more files"""
+    st.markdown("""
+    <div class="completion-screen">
+        <h1 class="completion-title">✅ Processing Complete!</h1>
+        <p style="font-size: 1.2rem;">All files have been processed and saved successfully.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    if st.button("🚀 Start New Processing Session", key="process_more", use_container_width=True, 
+                type="primary", help="Click to process another batch of files"):
+        reset_processing()
+        st.rerun()
 
 def main():
-    st.title("Vehicle Invoice Processing Portal")
+    st.title("Work Truck Solution's Invoice Processing")
     st.markdown("Transform complex vehicle invoices into organized, actionable information.")
+
+    # Show completion screen if processing finished
+    if st.session_state.processing_completed:
+        show_completion_screen()
+        return  # Stop further processing
 
     processor = InvoiceProcessor()
 
     # Step 1: Upload
     st.header("1. Invoice Upload")
-    if st.session_state.processed_data and st.button("Add More Files"):
-        reset_processing()
-        return
     
     uploaded_files = st.file_uploader(
-        "Upload Invoice PDF(s)", 
+        "Upload Invoice", 
         type="pdf", 
         accept_multiple_files=True,
         help="Drag and drop or click to upload PDF invoices"
@@ -552,8 +596,9 @@ def main():
             st.write(f"File {idx+1} of {len(filenames)}")
         with col4:
             if st.button("Finish Processing"):
-                reset_processing()
-                return
+                # Set completion flag
+                st.session_state.processing_completed = True
+                st.rerun()
         
         # Display
         col_left, col_right = st.columns(2)
@@ -574,27 +619,19 @@ def main():
             st.subheader("Extracted Data")
             edited_data = display_extracted_data(current_data, current_file)
             
-            col_s1, col_s2 = st.columns(2)
-            with col_s1:
-                if st.button("💾 Save Current File", key=f"save_{current_file}"):
-                    if save_data(current_file, edited_data):
-                        st.rerun()
-            with col_s2:
-                if st.button("💾 Save All Files", key="save_all"):
-                    if save_all_data():
-                        st.rerun()
-
-    # Saved files
-    if st.session_state.saved_files:
-        st.header("Saved Files")
-        for path in st.session_state.saved_files:
-            st.markdown(f"""
-            <div class="file-card">
-                <strong>{os.path.basename(path)}</strong> - 
-                <span class="success">Saved</span>
-                <br><small>{path}</small>
-            </div>
-            """, unsafe_allow_html=True)
+            # Show last save confirmation if available
+            if st.session_state.last_saved_file == current_file and st.session_state.last_save_time:
+                st.markdown(f"""
+                <div class="save-confirmation">
+                    ✅ Last saved at {st.session_state.last_save_time}
+                </div>
+                """, unsafe_allow_html=True)
+            
+            if st.button("💾 Save Current File", key=f"save_{current_file}"):
+                if save_data(current_file, edited_data):
+                    # Show confirmation in the main area
+                    st.success(f"✅ '{current_file}' saved successfully!")
+                    st.rerun()
 
 if __name__ == "__main__":
     main()

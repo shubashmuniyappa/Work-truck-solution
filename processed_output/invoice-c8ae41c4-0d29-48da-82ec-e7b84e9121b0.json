@@ -1,0 +1,242 @@
+{
+  "inventory_arrival_date": "06-18-2025",
+  "stock_number": "adsam,ndals",
+  "vin": "1HA6GUC73RN003296",
+  "condition": "New",
+  "model_year": "2024",
+  "make": "Chevrolet",
+  "model": "CG33803 C4500",
+  "body_type": "Box Truck",
+  "body_line": "",
+  "body_manufacturer": "Forest River, Inc.",
+  "body_model": "RPAF1576 ROCKPORT: 15'L x 96\"W x 90\"H FRP",
+  "distributor": "Forest River, Inc.",
+  "distributor_location": "Elkhart, IN 46515",
+  "invoice_date": "2024-07-26",
+  "components": [
+    {
+      "id": 3167729,
+      "name": "Body",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Body Model",
+          "value": "RPAF1576 ROCKPORT: 15'L x 96\"W x 90\"H FRP"
+        },
+        {
+          "id": 1,
+          "name": "Length",
+          "value": "180\""
+        },
+        {
+          "id": 2,
+          "name": "Width",
+          "value": "96\""
+        },
+        {
+          "id": 3,
+          "name": "Height",
+          "value": "90\""
+        },
+        {
+          "id": 4,
+          "name": "Material",
+          "value": "3/8\" FRP Gelcoat Sidewalls"
+        },
+        {
+          "id": 5,
+          "name": "Bulkhead",
+          "value": "Sliding Door on Cab Side with 6\" Set Back Wall for Full Seat Travel"
+        },
+        {
+          "id": 6,
+          "name": "Floor",
+          "value": "1-1/8\" Laminated Hardwood"
+        },
+        {
+          "id": 7,
+          "name": "Long Sills",
+          "value": "Tube Shape"
+        },
+        {
+          "id": 8,
+          "name": "Crossmembers",
+          "value": "3\" Crossmembers 16\" OC"
+        },
+        {
+          "id": 9,
+          "name": "Front Radius",
+          "value": "Aluminum"
+        },
+        {
+          "id": 10,
+          "name": "Vertical Corners",
+          "value": "Aluminum"
+        },
+        {
+          "id": 11,
+          "name": "Rear Mud Flaps",
+          "value": "Included"
+        },
+        {
+          "id": 12,
+          "name": "Rear Structure",
+          "value": "Coated with Flush Rear Sill"
+        },
+        {
+          "id": 13,
+          "name": "Rear Step Bumper",
+          "value": "12\" Steel Pooched"
+        },
+        {
+          "id": 14,
+          "name": "Roof",
+          "value": ".032 Aluminum, Roof Bows 24\" OC"
+        },
+        {
+          "id": 15,
+          "name": "Door",
+          "value": "Composite Rear Roll Up Door with Inside Release"
+        },
+        {
+          "id": 16,
+          "name": "Lighting",
+          "value": "LED Rear Lights in Side Posts, LED Clearance Lights, (1) LED Cargo Light w/ 3-Way Cab Switch"
+        },
+        {
+          "id": 17,
+          "name": "Folded Features",
+          "value": "(10) Tie Rings, (2) Grab Handles, Undercoating"
+        }
+      ]
+    },
+    {
+      "id": 3167730,
+      "name": "Chassis",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Chassis VIN",
+          "value": "1HA6GUC73RN003296"
+        },
+        {
+          "id": 1,
+          "name": "Wheelbase",
+          "value": "159\""
+        },
+        {
+          "id": 2,
+          "name": "Rear Axle",
+          "value": "Dual Rear Wheels"
+        },
+        {
+          "id": 3,
+          "name": "Fuel Tank",
+          "value": "57 Gallon Rear"
+        },
+        {
+          "id": 4,
+          "name": "GVWR",
+          "value": "14,200 lbs"
+        }
+      ]
+    },
+    {
+      "id": 3167731,
+      "name": "Engine",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Displacement",
+          "value": "6.6L"
+        },
+        {
+          "id": 1,
+          "name": "Fuel Type",
+          "value": "Gasoline"
+        }
+      ]
+    },
+    {
+      "id": 3167732,
+      "name": "Cargo/Electrical Equipment",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Back-Up Camera",
+          "value": "Rear View Back-Up Camera, High Definition, 7\" LCD Monitor & Audio (Rockport Supplied)"
+        },
+        {
+          "id": 1,
+          "name": "Back-Up Alarm",
+          "value": "Rear Back-Up Alarm"
+        },
+        {
+          "id": 2,
+          "name": "Ramp",
+          "value": "12' x 30\" Underfloor Ramp (30\" Useable Width)"
+        },
+        {
+          "id": 3,
+          "name": "E-Track",
+          "value": "Surface E-Track Each Side, Located @ 36\" to Centerline (In Place Of Standard D-Rings)"
+        },
+        {
+          "id": 4,
+          "name": "Lighting",
+          "value": "LED Cargo Light w/ 3-Way Lighted Cab Switch, LED Clearance Lights, LED Rear Lights in Posts"
+        }
+      ]
+    },
+    {
+      "id": 3167733,
+      "name": "Interior/Protection",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Scuff Plate - Sidewalls",
+          "value": "Galvanized Steel Scuff, 12\" High on Sidewalls"
+        },
+        {
+          "id": 1,
+          "name": "Scuff Plate - Front Wall",
+          "value": "Galvanized Steel Scuff, 12\" High on Front Wall with Return Lip, Fastened to Floor"
+        }
+      ]
+    },
+    {
+      "id": 3167734,
+      "name": "Floor/Frame",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Crossmember Spacing",
+          "value": "12\" Centers, 3\" C-Channel (In Lieu of 16\")"
+        }
+      ]
+    },
+    {
+      "id": 3167735,
+      "name": "Antenna",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "OnStar Antenna Location",
+          "value": "Relocated to Cargo Roof"
+        },
+        {
+          "id": 1,
+          "name": "Equipment",
+          "value": "Option G7K Antenna Equipment, Cable & Ground Plate"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "date": "2025-06-19",
+      "type": "Invoice",
+      "path": "img/invoices/bodyinvoices/-/invoice-c8ae41c4-0d29-48da-82ec-e7b84e9121b0.pdf"
+    }
+  ]
+}

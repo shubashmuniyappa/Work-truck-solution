@@ -1,0 +1,213 @@
+{
+  "inventory_arrival_date": "",
+  "stock_number": "",
+  "vin": "3C7WRNEL9RG111741",
+  "condition": "New",
+  "model_year": "2023",
+  "make": "Ram",
+  "model": "RAM 5500",
+  "body_type": "Dump Truck",
+  "body_line": "Dump Body",
+  "body_manufacturer": "Monroe Truck Equipment, Inc.",
+  "body_model": "9', MTE D-SERIES, Stainless Steel, 3-4 Yd Capacity, Folding Side, Dump Body w/ AR Flooring",
+  "distributor": "Monroe Truck Equipment, Inc.",
+  "distributor_location": "Chicago, IL 60677-2007",
+  "invoice_date": "2023-10-16",
+  "components": [
+    {
+      "id": 3167729,
+      "name": "Dump Body",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Body Model",
+          "value": "9', MTE D-SERIES, Stainless Steel, 3-4 Yd Capacity, Folding Side, Dump Body w/ AR Flooring"
+        },
+        {
+          "id": 1,
+          "name": "Material",
+          "value": "Stainless Steel"
+        },
+        {
+          "id": 2,
+          "name": "Capacity",
+          "value": "3-4 Yard"
+        },
+        {
+          "id": 3,
+          "name": "Floor Material",
+          "value": "3/16\" AR-400 Abrasive Resistance (145,000 Yield Strength)"
+        },
+        {
+          "id": 4,
+          "name": "Floor Yield Strength",
+          "value": "145,000 PSI"
+        },
+        {
+          "id": 5,
+          "name": "Side Material",
+          "value": "12 GA. Stainless Steel"
+        },
+        {
+          "id": 6,
+          "name": "End Material",
+          "value": "10 GA. Stainless Steel"
+        },
+        {
+          "id": 7,
+          "name": "Side Height",
+          "value": "16\""
+        },
+        {
+          "id": 8,
+          "name": "Tailgate Height",
+          "value": "22\""
+        },
+        {
+          "id": 9,
+          "name": "Front Bulkhead",
+          "value": "Heavy Duty with Tapered Laser Cut Window & 12\" Tapered Cab Shield"
+        },
+        {
+          "id": 10,
+          "name": "Tailgate",
+          "value": "Single-Lever Release, Quick Drop Tailgate"
+        },
+        {
+          "id": 11,
+          "name": "Understructure",
+          "value": "Cross-memberless with Stainless Steel Long Sills"
+        },
+        {
+          "id": 12,
+          "name": "Top Rails & Tailgate",
+          "value": "Internal Dirt Shedding"
+        },
+        {
+          "id": 13,
+          "name": "Underbody Tie Loops",
+          "value": "2"
+        },
+        {
+          "id": 14,
+          "name": "Rear Flaps",
+          "value": "Rubber"
+        },
+        {
+          "id": 15,
+          "name": "Features",
+          "value": "Long Life & Corrosion Resistant, Undercoated"
+        },
+        {
+          "name": "New Attribute",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": 3167730,
+      "name": "Lighting & Electrical",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Lighting Type",
+          "value": "L.E.D. FMVSS108 Lights & Reflectors"
+        },
+        {
+          "id": 1,
+          "name": "Trailer Receptacle",
+          "value": "Installed"
+        },
+        {
+          "id": 2,
+          "name": "Backup Camera",
+          "value": "Factory Backup Camera, greater than 10,000 GVW"
+        }
+      ]
+    },
+    {
+      "id": 3167731,
+      "name": "Sub-frame Hoist",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Type",
+          "value": "Double-Acting Electric Sub-Frame Hoist"
+        },
+        {
+          "id": 1,
+          "name": "Manufacturer",
+          "value": "Champion"
+        }
+      ]
+    },
+    {
+      "id": 3167732,
+      "name": "Towing Equipment",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Receiver Size",
+          "value": "2-1/2\" in 1/2\" Plate"
+        },
+        {
+          "id": 1,
+          "name": "Tongue Capacity",
+          "value": "1,800 lbs"
+        },
+        {
+          "id": 2,
+          "name": "Towing Capacity",
+          "value": "18,000 lbs"
+        }
+      ]
+    },
+    {
+      "id": 3167733,
+      "name": "Toolbox",
+      "attributes": [
+        {
+          "id": 0,
+          "name": "Manufacturer",
+          "value": "Buyers"
+        },
+        {
+          "id": 1,
+          "name": "Dimensions",
+          "value": "18\" x 18\" x 30\""
+        },
+        {
+          "id": 2,
+          "name": "Material",
+          "value": "Aluminum"
+        },
+        {
+          "id": 3,
+          "name": "Type",
+          "value": "Underbody Tool Box with 3 Point Latch"
+        },
+        {
+          "id": 4,
+          "name": "Location",
+          "value": "Curbside"
+        }
+      ]
+    },
+    {
+      "name": "New Component",
+      "attributes": [
+        {
+          "name": "New Attribute",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "date": "2025-06-19",
+      "type": "Invoice",
+      "path": "img/invoices/bodyinvoices/-/invoice-8ad73279-2a32-4f43-9167-bbe134ae9d50.pdf"
+    }
+  ]
+}

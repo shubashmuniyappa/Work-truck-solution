@@ -5,27 +5,25 @@ from openai import AzureOpenAI
 from langchain_community.document_loaders import AzureAIDocumentIntelligenceLoader
 from typing import List, Dict, Optional
 
+# Import custom configuration and utility functions
 from config import load_environment_variables
 from utils import load_body_models, clean_and_validate_json, get_minimal_data_structure
 from guidelines import guidelines
 
 class InvoiceProcessor:
-    """
-    Modified InvoiceProcessor class to work with Streamlit frontend.
-    """
     def __init__(self):
-        """
-        Initializes the InvoiceProcessor with Azure AI clients.
-        """
+        # Load environment variables for Azure AI services and OpenAI
         (self.doc_intelligence_endpoint, self.doc_intelligence_key,
          self.openai_endpoint, self.openai_key, self.openai_api_version,
          self.openai_deployment, self.training_folder, self.analysis_features) = \
             load_environment_variables()
 
+        # Load predefined body models from a text file
         self.body_models = load_body_models("body_model.txt")
         if not self.body_models:
             print("Warning: No body models loaded. LLM might have reduced context for 'body_model' field.")
 
+        # Initialize the Azure OpenAI client
         self.openai_client = AzureOpenAI(
             api_version=self.openai_api_version,
             azure_endpoint=self.openai_endpoint,
@@ -33,28 +31,27 @@ class InvoiceProcessor:
         )
 
     def load_document_intelligence_data(self, file_path: str) -> str:
-        """
-        Loads and extracts text content from a PDF document.
-        """
+        # Use Azure AIDocumentIntelligenceLoader to extract text from a PDF document
         try:
             document_intelligence_loader = AzureAIDocumentIntelligenceLoader(
                 api_endpoint=self.doc_intelligence_endpoint,
                 api_key=self.doc_intelligence_key,
                 file_path=file_path,
-                api_model="prebuilt-invoice",
-                mode="page",
+                api_model="prebuilt-invoice",  # Specify the prebuilt model for invoices
+                mode="page",  # Process document page by page
                 analysis_features=self.analysis_features,
             )
+            # Load documents and concatenate page content into a single string
             documents = document_intelligence_loader.load()
             return "\n".join([doc.page_content for doc in documents])
         except Exception as e:
+            # Raise an exception if document loading fails
             raise Exception(f"Failed to load document: {e}")
 
     def extract_invoice_data_with_llm(self, document_content: str, filename: str) -> str:
-        """
-        Sends document content to Azure OpenAI for structured data extraction.
-        """
+        # Get the current date to include in the prompt
         current_date = datetime.now().strftime('%Y-%m-%d')
+        # Construct the user prompt with document content and guidelines
         prompt_content = f"""
 Extract the information from the following document text and return it in the required JSON format:
 
@@ -66,7 +63,7 @@ Current date: {current_date}
 {guidelines}
 """
 
-        # Construct the complete system message
+        # Define the system message for the LLM, instructing it on data extraction and formatting
         system_message_content = f"""
 You are an expert vehicle invoice parser that extracts structured data from automobile invoices including truck bodies, equipment, and vehicle modifications.
 
@@ -148,6 +145,7 @@ Below is a list of known body models for reference when identifying the body_mod
 **CRITICAL: Return ONLY valid JSON - no markdown, no explanations, no additional text.**
 """
 
+        # Make a chat completion request to Azure OpenAI
         try:
             response = self.openai_client.chat.completions.create(
                 messages=[
@@ -161,29 +159,33 @@ Below is a list of known body models for reference when identifying the body_mod
                 presence_penalty=0.0,
                 model=self.openai_deployment
             )
+            # Return the extracted content from the LLM response
             return response.choices[0].message.content
         except Exception as e:
+            # Raise an exception if the API call fails
             raise Exception(f"Azure OpenAI API call failed: {e}")
 
     def process_single_invoice(self, file_path: str, filename: str) -> Dict:
-        """
-        Processes a single PDF invoice file.
-        """
+        # Process a single invoice file
         try:
+            # Load document content using Azure Document Intelligence
             document_content = self.load_document_intelligence_data(file_path)
+            # Extract raw JSON data using the LLM
             raw_llm_response = self.extract_invoice_data_with_llm(document_content, filename)
+            # Clean, validate, and standardize the JSON response
             processed_data = clean_and_validate_json(raw_llm_response, filename)
             return processed_data
         except Exception as e:
+            # If processing fails, print an error and return a minimal data structure
             print(f"Error processing file {filename}: {str(e)}")
             return get_minimal_data_structure(filename)
 
     def process_invoices(self, file_paths: List[str]) -> Dict[str, Dict]:
-        """
-        Processes multiple invoices and returns a dictionary with filename as key.
-        """
+        # Process a list of invoice file paths
         results = {}
         for file_path in file_paths:
+            # Extract filename from the file path
             filename = os.path.basename(file_path)
+            # Process each invoice and store the result with the filename as key
             results[filename] = self.process_single_invoice(file_path, filename)
         return results
